@@ -1,31 +1,41 @@
 import React, { useContext } from 'react';
 import './NavBar.scss';
 import { store } from '../../App';
+import { motion  } from 'framer-motion';
 
 const NavBar = () => {
   const [state, dispatch] = useContext(store);
 
   return (
-    <nav>
+    <motion.nav
+      initial={{opacity: 0, scale: 0.25}}
+      animate={{opacity: 1, scale: 1}}
+      transition={{type: 'spring',duration: 0.7}}
+      className={` ${state.darkmode ? 'dark-nav' : 'light-nav'}`}
+    >
+    {/* <nav
+      className={` ${state.darkmode ? 'dark-nav' : 'light-nav'}`}
+      // className='dark-nav'
+    > */}
       <p>j</p>
       <h3
-        className={`first light-nav`}
+        className={`first  ${state.darkmode ? 'dark-anchor' : 'light-anchor'}`}
       >
         About Me
       </h3>
 
       <h3
-        className={`light-nav`}
+        className={`${state.darkmode ? 'dark-anchor' : 'light-anchor'}`}
       >
         Portfolio
       </h3>
       <h3
-        className={`light-nav`}
+        className={`${state.darkmode ? 'dark-anchor' : 'light-anchor'}`}
       >
         Skills
       </h3>
       <h3
-        className={`light-nav`}
+        className={`${state.darkmode ? 'dark-anchor' : 'light-anchor'}`}
       >
         Resume
       </h3>
@@ -35,7 +45,8 @@ const NavBar = () => {
       >
         Contact
       </button>
-    </nav>
+    {/* </nav> */}
+    </motion.nav>
   )
 }
 
