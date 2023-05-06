@@ -2,6 +2,7 @@ import React,{ useReducer, createContext, useEffect, useContext, useRef } from '
 import reducer from './reducers/reducer';
 import './App.scss';
 import NavBar from './components/NavBar/NavBar';
+import ThemeButton from './components/ThemeButton/ThemeButton';
 
 export const store = createContext<any>(null);
 
@@ -18,6 +19,7 @@ const App = () => {
         className='App'
       >
         <NavBar />
+        <ThemeButton />
       </div>
     </StoreProvider>
   )
