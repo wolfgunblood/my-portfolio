@@ -15,7 +15,7 @@ const ThemeButton = () => {
         <motion.button
             initial={{ y: 150 }}
             animate={{ y: 0 }}
-            transition={{ type: 'spring',duration: 0.5, delay: 0.2  }}
+            transition={{ type: 'spring',duration: 0.2 }}
             className={`theme-button
                 ${state.darkmode ? 'dark-theme-button' : 'light-theme-button'} 
             `}
