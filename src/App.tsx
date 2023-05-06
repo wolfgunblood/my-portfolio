@@ -5,6 +5,7 @@ import NavBar from './components/NavBar/NavBar';
 import ThemeButton from './components/ThemeButton/ThemeButton';
 import sampleStore from './utils/samples/sampleStore';
 import Hero from './components/Hero/Hero';
+import About from './components/About/About';
 
 export const store = createContext<any>(null);
 
@@ -23,6 +24,7 @@ const App = () => {
         <NavBar />
         <ThemeButton />
         <Hero />
+        <About />
       </div>
     </StoreProvider>
   )

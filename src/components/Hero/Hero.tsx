@@ -8,13 +8,13 @@ const Hero = () => {
     const [state, dispatch] = useContext(store);
 
   return (
-    <div className={`hero-container ${state.darkmode ? 'dark-bg-1' : 'light-bg-1'}`}>
+    <div className={`hero-container ${state.darkMode ? 'dark-bg-1' : 'light-bg-1'}`}>
         <div className='anchor' id='hero' />
         <motion.div>
           Hi
         </motion.div>
         <motion.h2
-          className={`${state.darkmode ? 'white-opacity' : 'light-eyebrow'}`}
+          className={`${state.darkMode ? 'white-opacity' : 'light-eyebrow'}`}
           initial={{ opacity: 0, y: 140  }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ 
@@ -26,7 +26,7 @@ const Hero = () => {
           Jalaj Doraiburu
         </motion.h2>
         <motion.h1
-          className={`${state.darkmode ? 'dark-heading' : 'light-heading'}`}
+          className={`${state.darkMode ? 'dark-heading' : 'light-heading'}`}
           initial={{ opacity: 0, y: 140  }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ 
@@ -38,7 +38,7 @@ const Hero = () => {
           Frontend Developer
         </motion.h1>
         <motion.h4
-          className={`${state.darkmode ? 'white-opacity-max' : 'light-phrase'}`}
+          className={`${state.darkMode ? 'white-opacity-max' : 'light-phrase'}`}
           initial={{ opacity: 0, y: 140  }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ 

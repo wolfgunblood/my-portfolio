@@ -1,5 +1,5 @@
 const sampleStore = {
-    darkmode: false,
+    darkMode: false,
 }
 
 export default sampleStore;

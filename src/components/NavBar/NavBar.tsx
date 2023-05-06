@@ -11,7 +11,7 @@ const NavBar = () => {
       initial={{opacity: 0, scale: 0.25}}
       animate={{opacity: 1, scale: 1}}
       transition={{type: 'spring',duration: 0.7}}
-      className={` ${state.darkmode ? 'dark-nav' : 'light-nav'}`}
+      className={` ${state.darkMode ? 'dark-nav' : 'light-nav'}`}
     >
     {/* <nav
       className={` ${state.darkmode ? 'dark-nav' : 'light-nav'}`}
@@ -19,23 +19,23 @@ const NavBar = () => {
     > */}
       <p>j</p>
       <h3
-        className={`first  ${state.darkmode ? 'dark-anchor' : 'light-anchor'}`}
+        className={`first  ${state.darkMode ? 'dark-anchor' : 'light-anchor'}`}
       >
         About Me
       </h3>
 
       <h3
-        className={`${state.darkmode ? 'dark-anchor' : 'light-anchor'}`}
+        className={`${state.darkMode ? 'dark-anchor' : 'light-anchor'}`}
       >
         Portfolio
       </h3>
       <h3
-        className={`${state.darkmode ? 'dark-anchor' : 'light-anchor'}`}
+        className={`${state.darkMode ? 'dark-anchor' : 'light-anchor'}`}
       >
         Skills
       </h3>
       <h3
-        className={`${state.darkmode ? 'dark-anchor' : 'light-anchor'}`}
+        className={`${state.darkMode ? 'dark-anchor' : 'light-anchor'}`}
       >
         Resume
       </h3>

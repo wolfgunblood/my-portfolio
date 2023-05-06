@@ -7,7 +7,7 @@ const reducer = (state = sampleStore, action: any) => {
             // eslint-disable-next-line no-case-declarations
             const darkmode = {
                 ...state,
-                darkmode: !state.darkmode,
+                darkMode: !state.darkMode,
             };
             return darkmode;
         default:
