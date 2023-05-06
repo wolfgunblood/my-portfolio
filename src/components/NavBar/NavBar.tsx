@@ -13,6 +13,7 @@ const NavBar = () => {
       >
         About Me
       </h3>
+
       <h3
         className={`light-nav`}
       >
