@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import './ThemeButton.scss'
+import { motion } from 'framer-motion';
 
 const ThemeButton = () => {
   return (
