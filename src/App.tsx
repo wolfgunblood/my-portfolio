@@ -7,6 +7,7 @@ import sampleStore from './utils/samples/sampleStore';
 import Hero from './components/Hero/Hero';
 import About from './components/About/About';
 import Projects from './components/Projects/Projects';
+import Skills from './components/Skills/Skills';
 
 export const store = createContext<any>(null);
 
@@ -24,9 +25,10 @@ const App = () => {
       >
         <NavBar />
         <ThemeButton />
-        <Hero />
-        <About />
-        <Projects />
+        {/* <Hero /> */}
+        {/* <About /> */}
+        {/* <Projects /> */}
+        <Skills />
       </div>
     </StoreProvider>
   )
