@@ -6,6 +6,7 @@ import ThemeButton from './components/ThemeButton/ThemeButton';
 import sampleStore from './utils/samples/sampleStore';
 import Hero from './components/Hero/Hero';
 import About from './components/About/About';
+import Projects from './components/Projects/Projects';
 
 export const store = createContext<any>(null);
 
@@ -25,6 +26,7 @@ const App = () => {
         <ThemeButton />
         <Hero />
         <About />
+        <Projects />
       </div>
     </StoreProvider>
   )
