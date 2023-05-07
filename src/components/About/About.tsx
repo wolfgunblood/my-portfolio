@@ -26,7 +26,7 @@ const About = () => {
         My Tech Stack and Expertise.
       </motion.h1>
 
-      <div className='intro-container'>
+      {/* <div className='intro-container'>
         <section
           className={`left-intro big-card ${state.darkMode ? 'dark-card' : 'light-card'}`}
         >
@@ -85,7 +85,7 @@ const About = () => {
             </div>
           </motion.div>
         </section>
-      </div>
+      </div> */}
     </div>
   )
 }

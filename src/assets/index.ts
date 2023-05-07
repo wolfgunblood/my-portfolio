@@ -1,0 +1,1 @@
+export {default as Javascript} from './images/javascript.png';

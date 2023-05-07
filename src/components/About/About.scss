@@ -9,12 +9,12 @@
     .start {
         align-self: flex-start;
     }
+    #about-me {
+        position: absolute;
+        top: 60px;
+    }
 }
 
-#about-me {
-    position: absolute;
-    top: 60px;
-}
 
 .eyebrow {
     padding-top: 143px;
@@ -24,17 +24,59 @@
     font-family: 'Times New Roman', Times, serif;
     margin-bottom: 12px;
     margin-left: 25%;
+
+    @media screen and (max-width: 1300px) {
+        margin-left: 17.5%;
+    }
+    @media screen and (max-width: 1050px) {
+        margin-left: 13.5%;
+    }
+    @media screen and (max-width: 586px) {
+        margin-left: 9.25%;
+    }
+    @media screen and (max-width: 586px) {
+        font-size: 24px;
+    }
 }
 
 .heading{
     font-size: 92px;
     font-family: 'Times New Roman', Times, serif;
-    max-width: 750px;
+    max-width: 725px;
     letter-spacing: -0.045em;
     line-height: 1.1;
-    margin-left: 24%;
+    margin-left: 25%;
     font-weight: 600;
-
+    
+        @media screen and (max-width: 1300px) {
+            margin-left: 17.5%;
+        }
+        @media screen and (max-width: 1050px) {
+            margin-left: 13.5%;
+        }
+        @media screen and (max-width: 860px) {
+            font-size: 82px;
+        }
+        @media screen and (max-width: 770px) {
+            font-size: 72px;
+            max-width: 560px;
+        }
+        @media screen and (max-width: 586px) {
+            margin-left: 9.25%;
+            max-width: 485px;
+            font-size: 580px;
+        }
+        @media screen and (max-width: 428px) {
+            font-size: 44px;
+            max-width: 340px;
+        }
+        @media screen and (max-width: 380px) {
+            font-size: 40px;
+        }
+        @media screen and (max-width: 340px) {
+            max-width: 280px;
+        }
+    
 }
 
 .intro-container{

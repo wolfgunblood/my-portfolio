@@ -26,8 +26,8 @@ const App = () => {
         <NavBar />
         <ThemeButton />
         <Hero />
-        {/* <About /> */}
-        {/* <Projects /> */}
+        <About />
+        <Projects />
         <Skills />
       </div>
     </StoreProvider>
