@@ -14,16 +14,16 @@ const Skills = () => {
     
           <div className='skills-container'>
             <div className='skills-container-first-row'>
-              <SkillTab />
+              <SkillTab topic ="languages"/>
             </div>
             <div className='skills-container-second-row'>
-              <SkillTab />
-              <SkillTab />
+              {/* <SkillTab/> */}
+              {/* <SkillTab /> */}
             </div>
             <div className='skills-container-third-row'>
-              <SkillTab />
-              <SkillTab />
-              <SkillTab />
+              {/* <SkillTab /> */}
+              {/* <SkillTab /> */}
+              {/* <SkillTab /> */}
             </div>
           </div>
     </div>

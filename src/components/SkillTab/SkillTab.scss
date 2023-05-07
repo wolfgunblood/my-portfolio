@@ -1,0 +1,22 @@
+.skill-tab-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 28px;
+    border-radius: 28px;
+    align-items: center;
+
+    .skill-tab-list {
+        display: flex;
+        margin-top: 16px;
+        gap: 46px;
+        padding: 0 22px;
+        justify-content: space-between;
+    }
+
+    .languages{
+        gap: 60px;
+        padding: 0 26px;
+    }
+}
+
