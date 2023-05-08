@@ -1,0 +1,38 @@
+.contact-container{
+    width: 100vw;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    #contact{
+        position: absolute;
+        top: 20px;
+    }
+
+    h1{
+        // max-width: 700px;
+        font-size: 64px;
+        text-align: center;
+
+    }
+
+    h1,h3{
+        margin-left: 25%;
+    }
+
+    h3{
+        padding-top: 150px;
+    }
+
+    p{
+        text-align: center;
+        margin-top: 45px;
+        font-size: 16px;
+        max-width: 720px;
+        letter-spacing: -0.025em;
+        font-family: 'Times New Roman', Times, serif;
+        margin-left: 25%;
+
+    }
+}
