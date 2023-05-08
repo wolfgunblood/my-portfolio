@@ -22,7 +22,7 @@ const ThemeButton = () => {
             onClick={handleTheme}
         >
             <h4>
-                {state.darkmode ? 'To Light Mode' : 'To Dark Mode'}
+                {state.darkMode ? 'To Light Mode' : 'To Dark Mode'}
             </h4>
         </motion.button>
     )
