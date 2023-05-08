@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { store } from '../../App';
 import { motion } from 'framer-motion';
 import './Contact.scss';
+import ContactForm from '../ContactForm/ContactForm';
 import { ReactComponent as LinkedIn } from '../../assets/images/linkedin.svg';
 
 
@@ -51,7 +52,7 @@ const Contact = () => {
             x:{ duration: 0.8, type: 'spring', delay:0.25 },
           }}
         >
-          Contact Me
+          <ContactForm />
         </motion.div>
 
         <motion.section
