@@ -17,13 +17,13 @@ const Skills = () => {
               <SkillTab topic ="languages"/>
             </div>
             <div className='skills-container-second-row'>
-              {/* <SkillTab/> */}
-              {/* <SkillTab /> */}
+              <SkillTab topic="frameworks"/>
+              <SkillTab topic="libraries"/>
             </div>
             <div className='skills-container-third-row'>
-              {/* <SkillTab /> */}
-              {/* <SkillTab /> */}
-              {/* <SkillTab /> */}
+              <SkillTab topic="collaborative"/>
+              <SkillTab topic="prototyping"/>
+              <SkillTab topic="code"/>
             </div>
           </div>
     </div>
