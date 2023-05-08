@@ -38,6 +38,14 @@ const SkillTab = ({topic}) => {
       viewport={{ once: true }}
       transition={{ duration: 0.5,type: "spring",bounce: 0.3,delay: topic === "libraries" ? 0.35 : topic === "prototyping" ? 0.35 : topic === "code" ? 0.65 : 0.05 }}
     >
+      <h3 className={`head ${state.darkMode ? "white": ""}`}>
+        {topic === "languages" ? "Languages" : null}
+        {topic === "libraries" ? "Libraries" : null}
+        {topic === "frameworks" ? "Frameworks" : null}
+        {topic === "collaborative" ? "Collaborative Work" : null}
+        {topic === "prototyping" ? "Prototyping" : null}
+        {topic === "code" ? "Code Editor" : null}
+      </h3>
       {topic === "languages" ? (
         <div className='skill-tab-list languages'>
           <Image source={Typescript} name="Typescript" />
