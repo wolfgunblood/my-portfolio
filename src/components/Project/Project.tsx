@@ -1,15 +1,14 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useRef } from 'react';
+import './Project.scss'
 import TopBar from '../TopBar/TopBar';
 import { BsArrowUpRight, BsArrowRight } from 'react-icons/bs';
 import { store } from '../../App';
 // import { motion } from 'framer-motion';
 import { motion, Variants } from "framer-motion";
 import Preview1 from '../../assets/images/preview1.png';
-import Preview2 from '../../assets/images/preview2.png'
-import Preview3 from '../../assets/images/preview3.png'
-import Preview4 from '../../assets/images/preview4.png'
-
-
+import Preview2 from '../../assets/images/preview2.png';
+import Preview3 from '../../assets/images/preview3.png';
+import Preview4 from '../../assets/images/preview4.png';
 
 const Project = ({ index }) => {
     const [state, dispatch] = useContext(store);
@@ -44,7 +43,7 @@ const Project = ({ index }) => {
         Preview4,
     ];
 
-    const cardVariants: Variants = {
+    const projectVariants: Variants = {
         offscreen: {
             y: 300
         },
@@ -59,14 +58,18 @@ const Project = ({ index }) => {
         }
     };
 
+
+
     return (
         <motion.div
-            className="card-container"
             initial="offscreen"
             whileInView="onscreen"
             viewport={{ once: true, amount: 0.8 }}
         >
-            <motion.div className='project__wrapper' variants={cardVariants}>
+            <motion.div 
+                className='project__wrapper' 
+                variants={projectVariants} 
+            >
                 <div className={`project__preview ${zActive ? 'zActive' : ''}`} onClick={() => setZActive(!zActive)}>
                     <TopBar active={zActive} />
                     <div className='imageWrapper'>
@@ -76,13 +79,13 @@ const Project = ({ index }) => {
                 <div className={`project__details ${!zActive ? 'zActive' : ''}`} onClick={() => setZActive(!zActive)}>
                     {console.log(zActive)}
                     <TopBar active={!zActive} />
-                    <div className='details__wrapper'>
-                        <p>
+                    <div className={`details__wrapper ${state.darkMode ? 'dark-wrapper' : 'light-wrapper'}`}>
+                        <p className={`${state.darkMode ? 'dark-detail' : 'light-detail'}`}>
                             {loremipsum[index]}
                         </p>
                         <hr className="horizontal-line" />
                         <div className='details__footer'>
-                            <p className='footer__text'>{builtOn[index]}</p>
+                            <p className={`footer__text ${state.darkMode ? 'dark-detail' : 'light-detail'}`}>{builtOn[index]}</p>
                             <div className='btn-group'>
                                 <button
                                     onClick={(e) => { e.stopPropagation(); }}
