@@ -2,6 +2,8 @@ import React, { useContext} from 'react';
 import './Hero.scss';
 import { store } from '../../App';
 import { motion } from 'framer-motion';
+import { BsArrowUpRight, BsArrowRight } from 'react-icons/bs';
+
 
 const Hero = () => {
 
@@ -61,6 +63,7 @@ const Hero = () => {
           }}
         >
           <h3>Find out more</h3>
+          <BsArrowUpRight className='arrow-icon' size={20}/>
         </motion.button>
     </div>
   )
