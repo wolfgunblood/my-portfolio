@@ -5,11 +5,11 @@ import { CgExpand } from "react-icons/cg";
 import { IconContext } from "react-icons";
 import './TopBar.scss';
 
-const TopBar = ({active}) => {
+const TopBar = ({active,handle}) => {
     const [state, dispatch] = useContext(store);
 
     return (
-        <div className={`windows-top-bar ${state.darkMode ? "dark-top-bar" : "light-top-bar"}`}>
+        <div id={`${handle}`} className={`windows-top-bar ${state.darkMode ? "dark-top-bar" : "light-top-bar"}`}>
             <div className='windows-controls'>
                 <button
                     className={`windows-control ${active ? 'close-window' : state.darkMode ? 'notActive-darkMode' :  'notActive-lightMode'}`}

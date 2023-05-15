@@ -14,6 +14,7 @@ import Draggable from 'react-draggable';
 const Project = ({ index }) => {
     const [state, dispatch] = useContext(store);
     const [zActive, setZActive] = React.useState(false);
+    const [zActive_2, setZActive_2] = React.useState(true);
 
     const [isHovered, setIsHovered] = useState(false);
 
@@ -72,24 +73,35 @@ const Project = ({ index }) => {
                 variants={projectVariants}
             >
                 <Draggable
-                    handle="#draggable"
+                    handle="#handle"
                     axis='x'
                 >
 
-                    <div id="draggable" className={`project__preview ${zActive ? 'zActive' : ''}`} onClick={() => setZActive(!zActive)}>
-                        <TopBar active={zActive} />
+                    <div
+                        className={`project__preview ${zActive ? 'zActive' : ''}`}
+                        onClick={() => {
+                            setZActive(true);
+                            setZActive_2(false)
+                        }}
+                    >
+                        <TopBar active={zActive} handle={"handle"} />
                         <div className='imageWrapper'>
                             <img src={preview[index]} alt="Screenshot of Framer Motion" />
                         </div>
                     </div>
                 </Draggable>
                 <Draggable
-                    handle="#draggable1"
+                    handle="#handle1"
                     axis='x'
                 >
-                    <div id="draggable1" className={`project__details ${!zActive ? 'zActive' : ''}`} onClick={() => setZActive(!zActive)}>
-                        {console.log(zActive)}
-                        <TopBar active={!zActive} />
+                    <div 
+                        className={`project__details ${zActive_2 ? 'zActive' : ''}`} 
+                        onClick={() => {
+                            setZActive(false);
+                            setZActive_2(true);
+                        }}
+                    >
+                        <TopBar active={!zActive} handle={"handle1"} />
                         <div className={`details__wrapper ${state.darkMode ? 'dark-wrapper' : 'light-wrapper'}`}>
                             <p className={`${state.darkMode ? 'dark-detail' : 'light-detail'}`}>
                                 {loremipsum[index]}
