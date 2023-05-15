@@ -9,6 +9,7 @@ import Preview1 from '../../assets/images/preview1.png';
 import Preview2 from '../../assets/images/preview2.png';
 import Preview3 from '../../assets/images/preview3.png';
 import Preview4 from '../../assets/images/preview4.png';
+import Draggable from 'react-draggable';
 
 const Project = ({ index }) => {
     const [state, dispatch] = useContext(store);
@@ -66,47 +67,58 @@ const Project = ({ index }) => {
             whileInView="onscreen"
             viewport={{ once: true, amount: 0.8 }}
         >
-            <motion.div 
-                className='project__wrapper' 
-                variants={projectVariants} 
+            <motion.div
+                className='project__wrapper'
+                variants={projectVariants}
             >
-                <div className={`project__preview ${zActive ? 'zActive' : ''}`} onClick={() => setZActive(!zActive)}>
-                    <TopBar active={zActive} />
-                    <div className='imageWrapper'>
-                        <img src={preview[index]} alt="Screenshot of Framer Motion" />
+                <Draggable
+                    handle="#draggable"
+                    axis='x'
+                >
+
+                    <div id="draggable" className={`project__preview ${zActive ? 'zActive' : ''}`} onClick={() => setZActive(!zActive)}>
+                        <TopBar active={zActive} />
+                        <div className='imageWrapper'>
+                            <img src={preview[index]} alt="Screenshot of Framer Motion" />
+                        </div>
                     </div>
-                </div>
-                <div className={`project__details ${!zActive ? 'zActive' : ''}`} onClick={() => setZActive(!zActive)}>
-                    {console.log(zActive)}
-                    <TopBar active={!zActive} />
-                    <div className={`details__wrapper ${state.darkMode ? 'dark-wrapper' : 'light-wrapper'}`}>
-                        <p className={`${state.darkMode ? 'dark-detail' : 'light-detail'}`}>
-                            {loremipsum[index]}
-                        </p>
-                        <hr className="horizontal-line" />
-                        <div className='details__footer'>
-                            <p className={`footer__text ${state.darkMode ? 'dark-detail' : 'light-detail'}`}>{builtOn[index]}</p>
-                            <div className='btn-group'>
-                                <button
-                                    onClick={(e) => { e.stopPropagation(); }}
-                                    onMouseEnter={handleMouseEnter}
-                                    onMouseLeave={handleMouseLeave}
-                                >
-                                    <p>LIVE</p>
-                                    <BsArrowUpRight size={15} />
-                                    {/* {isHovered ? <BsArrowRight size={15} /> : <BsArrowUpRight size={15} />} */}
-                                </button>
-                                <button onClick={(e) => { e.stopPropagation(); }}>
-                                    <p>
-                                        CODE
-                                    </p>
-                                    <BsArrowUpRight size={15} />
-                                    {/* {isHovered ? <BsArrowRight size={15} /> : <BsArrowUpRight size={15} />} */}
-                                </button>
+                </Draggable>
+                <Draggable
+                    handle="#draggable1"
+                    axis='x'
+                >
+                    <div id="draggable1" className={`project__details ${!zActive ? 'zActive' : ''}`} onClick={() => setZActive(!zActive)}>
+                        {console.log(zActive)}
+                        <TopBar active={!zActive} />
+                        <div className={`details__wrapper ${state.darkMode ? 'dark-wrapper' : 'light-wrapper'}`}>
+                            <p className={`${state.darkMode ? 'dark-detail' : 'light-detail'}`}>
+                                {loremipsum[index]}
+                            </p>
+                            <hr className="horizontal-line" />
+                            <div className='details__footer'>
+                                <p className={`footer__text ${state.darkMode ? 'dark-detail' : 'light-detail'}`}>{builtOn[index]}</p>
+                                <div className='btn-group'>
+                                    <button
+                                        onClick={(e) => { e.stopPropagation(); }}
+                                        onMouseEnter={handleMouseEnter}
+                                        onMouseLeave={handleMouseLeave}
+                                    >
+                                        <p>LIVE</p>
+                                        <BsArrowUpRight size={15} />
+                                        {/* {isHovered ? <BsArrowRight size={15} /> : <BsArrowUpRight size={15} />} */}
+                                    </button>
+                                    <button onClick={(e) => { e.stopPropagation(); }}>
+                                        <p>
+                                            CODE
+                                        </p>
+                                        <BsArrowUpRight size={15} />
+                                        {/* {isHovered ? <BsArrowRight size={15} /> : <BsArrowUpRight size={15} />} */}
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </Draggable>
             </motion.div>
         </motion.div>
     )
