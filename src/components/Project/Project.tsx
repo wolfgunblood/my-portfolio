@@ -5,13 +5,13 @@ import { store } from '../../App';
 // import { motion } from 'framer-motion';
 import { motion, Variants } from "framer-motion";
 import Preview1 from '../../assets/images/preview1.png';
-import Preview2 from '../../assets/images/preview2.png' 
-import Preview3 from '../../assets/images/preview3.png' 
-import Preview4 from '../../assets/images/preview4.png' 
+import Preview2 from '../../assets/images/preview2.png'
+import Preview3 from '../../assets/images/preview3.png'
+import Preview4 from '../../assets/images/preview4.png'
 
 
 
-const Project = ({index}) => {
+const Project = ({ index }) => {
     const [state, dispatch] = useContext(store);
     const [zActive, setZActive] = React.useState(false);
 
@@ -43,46 +43,69 @@ const Project = ({index}) => {
         Preview3,
         Preview4,
     ];
+
+    const cardVariants: Variants = {
+        offscreen: {
+            y: 300
+        },
+        onscreen: {
+            y: 50,
+            // rotate: -10,
+            transition: {
+                type: "spring",
+                bounce: 0.4,
+                duration: 0.8
+            }
+        }
+    };
+
     return (
-        <div className='project__wrapper'>
-            <div className={`project__preview ${zActive ? 'zActive' : ''}`} onClick={() => setZActive(!zActive)}>
-                <TopBar active = {zActive} />
-                <div className='imageWrapper'>
-                    <img src={preview[index]} alt="Screenshot of Framer Motion" />
+        <motion.div
+            className="card-container"
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0.8 }}
+        >
+            <motion.div className='project__wrapper' variants={cardVariants}>
+                <div className={`project__preview ${zActive ? 'zActive' : ''}`} onClick={() => setZActive(!zActive)}>
+                    <TopBar active={zActive} />
+                    <div className='imageWrapper'>
+                        <img src={preview[index]} alt="Screenshot of Framer Motion" />
+                    </div>
                 </div>
-            </div>
-            <div className={`project__details ${!zActive ? 'zActive' : ''}`} onClick={() => setZActive(!zActive)}>
-                {console.log(zActive)}
-                <TopBar active = {!zActive} />
-                <div className='details__wrapper'>
-                    <p>
-                        {loremipsum[index]}
-                    </p>
-                    <hr className="horizontal-line" />
-                    <div className='details__footer'>
-                        <p className='footer__text'>{builtOn[index]}</p>
-                        <div className='btn-group'>
-                            <button
-                                onClick={(e) => { e.stopPropagation(); }}
-                                onMouseEnter={handleMouseEnter}
-                                onMouseLeave={handleMouseLeave}
-                            >
-                                <p>LIVE</p>
-                                <BsArrowUpRight size={15} />
-                                {/* {isHovered ? <BsArrowRight size={15} /> : <BsArrowUpRight size={15} />} */}
-                            </button>
-                            <button onClick={(e) => { e.stopPropagation(); }}>
-                                <p>
-                                    CODE
-                                </p>
-                                <BsArrowUpRight size={15} />
-                                {/* {isHovered ? <BsArrowRight size={15} /> : <BsArrowUpRight size={15} />} */}
-                            </button>
+                <div className={`project__details ${!zActive ? 'zActive' : ''}`} onClick={() => setZActive(!zActive)}>
+                    {console.log(zActive)}
+                    <TopBar active={!zActive} />
+                    <div className='details__wrapper'>
+                        <p>
+                            {loremipsum[index]}
+                        </p>
+                        <hr className="horizontal-line" />
+                        <div className='details__footer'>
+                            <p className='footer__text'>{builtOn[index]}</p>
+                            <div className='btn-group'>
+                                <button
+                                    onClick={(e) => { e.stopPropagation(); }}
+                                    onMouseEnter={handleMouseEnter}
+                                    onMouseLeave={handleMouseLeave}
+                                >
+                                    <p>LIVE</p>
+                                    <BsArrowUpRight size={15} />
+                                    {/* {isHovered ? <BsArrowRight size={15} /> : <BsArrowUpRight size={15} />} */}
+                                </button>
+                                <button onClick={(e) => { e.stopPropagation(); }}>
+                                    <p>
+                                        CODE
+                                    </p>
+                                    <BsArrowUpRight size={15} />
+                                    {/* {isHovered ? <BsArrowRight size={15} /> : <BsArrowUpRight size={15} />} */}
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     )
 }
 
