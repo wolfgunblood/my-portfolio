@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import './ThemeButton.scss'
 import { motion } from 'framer-motion';
 import { store } from '../../App';

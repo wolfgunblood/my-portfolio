@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import './NavBar.scss';
 import { store } from '../../App';
 import { motion  } from 'framer-motion';
 
 const NavBar = () => {
-  const [state, dispatch] = useContext(store);
+  const [state, _dispatch] = useContext(store);
 
   return (
     <motion.nav

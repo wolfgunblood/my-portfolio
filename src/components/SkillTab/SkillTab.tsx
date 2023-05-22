@@ -1,4 +1,4 @@
-import React,{ useContext } from 'react';
+import { useContext } from 'react';
 import { store } from '../../App';
 import './SkillTab.scss';
 import { motion } from 'framer-motion';
@@ -21,14 +21,13 @@ import {
   Redux1,
   SASS,
   Tailwind,
-  Theodinproject,
   Typescript,
   VSCode,
 } from '../../assets';
 
-const SkillTab = ({topic}) => {
+const SkillTab = ({topic} :any) => {
 
-  const [ state, dispatch ] = useContext(store);
+  const [ state, _dispatch ] = useContext(store);
 
   return (
     <motion.div

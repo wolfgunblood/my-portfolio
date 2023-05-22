@@ -1,4 +1,4 @@
-import React,{ useReducer, createContext, useEffect, useContext, useRef } from 'react';
+import { useReducer, createContext } from 'react';
 import reducer from './reducers/reducer';
 import './App.scss';
 import NavBar from './components/NavBar/NavBar';
@@ -10,6 +10,7 @@ import Projects from './components/Projects/Projects';
 import Skills from './components/Skills/Skills';
 import Contact from './components/Contact/Contact';
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const store = createContext<any>(null);
 
 const StoreProvider = ({ children }: any) => (

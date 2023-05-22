@@ -1,29 +1,14 @@
-import React,{ useState,useContext } from 'react';
+import { useContext } from 'react';
 import './Projects.scss';
 import { store } from '../../App';
 // import { motion } from 'framer-motion';
-import Preview1 from '../../assets/images/preview1.png' 
-import Preview2 from '../../assets/images/preview2.png' 
-import TopBar from '../TopBar/TopBar';
-import { BsArrowUpRight, BsArrowRight } from 'react-icons/bs';
 import Project from '../Project/Project';
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 
 
 const Projects = () => {
-  const [ state, dispatch ] = useContext(store);
-  const [ zActive, setZActive ] = React.useState(false);
+  const [ state, _dispatch ] = useContext(store);
 
-  const [isHovered, setIsHovered] = useState(false);
-
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
   
   return (
     <div 

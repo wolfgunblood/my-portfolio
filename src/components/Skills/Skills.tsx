@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import './Skills.scss';
 import SkillTab from '../SkillTab/SkillTab';
 import { store } from '../../App';
 
 const Skills = () => {
-  const [ state, dispatch ] = useContext(store);
+  const [ state, _dispatch ] = useContext(store);
 
   return (
     <div className={`container-skills ${state.darkMode ? 'dark-bg-2' : 'light-bg-2'}`}>

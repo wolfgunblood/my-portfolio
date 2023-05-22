@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { store } from '../../App';
 import { motion } from 'framer-motion';
 import './About.scss';
 
 const About = () => {
-  const [state, dispatch] = useContext(store);
+  const [state, _dispatch] = useContext(store);
 
   return (
     <div className={`aboutme-container ${state.darkMode ? 'dark-bg-2' : 'light-bg-2'}`}>
