@@ -1,7 +1,7 @@
-import React, { useState, useContext, useRef } from 'react';
+import React, { useState, useContext } from 'react';
 import './Project.scss'
 import TopBar from '../TopBar/TopBar';
-import { BsArrowUpRight, BsArrowRight } from 'react-icons/bs';
+import { BsArrowUpRight } from 'react-icons/bs';
 import { store } from '../../App';
 // import { motion } from 'framer-motion';
 import { motion, Variants } from "framer-motion";
@@ -11,12 +11,12 @@ import Preview3 from '../../assets/images/preview3.png';
 import Preview4 from '../../assets/images/preview4.png';
 import Draggable from 'react-draggable';
 
-const Project = ({ index }) => {
-    const [state, dispatch] = useContext(store);
+const Project = ({ index } :any  ) => {
+    const [state, _dispatch] = useContext(store);
     const [zActive, setZActive] = React.useState(false);
     const [zActive_2, setZActive_2] = React.useState(true);
 
-    const [isHovered, setIsHovered] = useState(false);
+    const [_isHovered, setIsHovered] = useState(false);
 
     const handleMouseEnter = () => {
         setIsHovered(true);
