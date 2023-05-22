@@ -1,16 +1,13 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { store } from '../../App';
 import { motion } from 'framer-motion';
 import './Contact.scss';
 import ContactForm from '../ContactForm/ContactForm';
 import { ReactComponent as LinkedIn } from '../../assets/images/linkedin.svg';
 
-
-
-
 const Contact = () => {
 
-  const [state, dispatch] = useContext(store);
+  const [state, _dispatch] = useContext(store);
   return (
     <div
       className={`contact-container 
