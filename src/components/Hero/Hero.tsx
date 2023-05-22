@@ -1,8 +1,8 @@
-import React, { useContext} from 'react';
+import { useContext} from 'react';
 import './Hero.scss';
 import { store } from '../../App';
 import { motion } from 'framer-motion';
-import { BsArrowUpRight, BsArrowRight } from 'react-icons/bs';
+import { BsArrowUpRight } from 'react-icons/bs';
 
 
 const Hero = () => {
@@ -52,7 +52,7 @@ const Hero = () => {
         I am creative , passionate and a problem solver.I love to trade and code.
         </motion.h4>
         <motion.button
-          onClick= {() => {}}
+          // onClick= {() => {}}
           initial={{ opacity: 0, y: 140  }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
