@@ -10,6 +10,23 @@ import toast, { Toaster } from "react-hot-toast";
 const Contact = () => {
 
   const [state, _dispatch] = useContext(store);
+  const copyEmail = () => {
+    navigator.clipboard.writeText('jalajdorai@gmail.com');
+    toast.success('Email copied successfully!', {
+      icon: "📧",
+      position: "top-left",
+      style: {
+        border: state.darkMode
+          ? "2px solid hsla(0,0%,51.4%,.16)"
+          : "1px solid #ebebeb",
+        boxShadow: "0px 3px 6px rgba(0, 0, 0, 0.225)",
+        color: state.darkMode ? "#fff" : "#000",
+        fontSize : "14px",
+        borderRadius: "14px",
+        backgroundColor: state.darkMode ? "#141414" : "",
+      }
+    });
+  };
   return (
     <div
       className={`contact-container 
@@ -76,7 +93,7 @@ const Contact = () => {
             LinkedIn
           </button>
           <button
-            className={`contact-socials-item  
+            className={`contact-socials-item  twitter
               ${state.darkMode ? 'dark-field' : ''}
             `}
           >
@@ -84,7 +101,7 @@ const Contact = () => {
             Twitter
           </button>
           <button
-            className={`contact-socials-item  
+            className={`contact-socials-item  whatsapp
               ${state.darkMode ? 'dark-field' : ''}
             `}
           >
@@ -92,12 +109,20 @@ const Contact = () => {
             WhatsApp
           </button>
           <button
-            className={`contact-socials-item 
+            className={`contact-socials-item github
               ${state.darkMode ? 'dark-field' : ''}
             `}
           >
             <AiOutlineGithub className={`svg ${state.darkMode ? 'dark-svg' : 'light-svg'}`} />
             Github
+          </button>
+
+          <button
+            className='email'
+            onClick={copyEmail}
+
+          >
+            {"Copy My Email"}
           </button>
         </motion.section>
       </div>

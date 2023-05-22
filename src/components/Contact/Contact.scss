@@ -96,6 +96,48 @@
                 }
             }
 
+            .github {
+                &:hover {
+                    background: rgb(197,155,251);
+                    background: linear-gradient(315deg, rgba(197,155,251,1) 0%, rgba(112,83,148,1) 100%);
+                }
+            }
+
+            .twitter {
+                &:hover {
+                    background: rgb(50,110,254);
+                    background: linear-gradient(315deg, rgba(50,110,254,1) 0%, rgba(1,170,238,1) 100%);
+                }
+            }
+
+            .whatsapp {
+                &:hover {
+                    background: rgb(12,144,34);
+                    background: linear-gradient(315deg, rgba(12,144,34,1) 0%, rgba(50,241,82,1) 100%);
+                }
+
+                .svg {
+                    transition: 0.25s all;
+                }
+            }
+
+            .email{
+                margin-top: 46px;
+                background-color: #0064ff;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+
+                @media screen and (max-width: 685px) {
+                    margin-top: 28px;
+                }
+
+                &:hover{
+                    background-color: #004fc5;
+                }
+
+            }
         }
     }
 
