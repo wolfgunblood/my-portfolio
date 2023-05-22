@@ -1,8 +1,6 @@
-import React,{ useContext } from 'react';
-import { store } from '../../App';
 import './Image.scss';
 
-const Imgae = ({source,name}) => {
+const Imgae = ({source} :any) => {
   return (
     <div className='skill-tab-item'>
         <img 
