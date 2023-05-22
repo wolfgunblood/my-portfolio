@@ -1,13 +1,13 @@
-import React, { useContext, useRef } from 'react';
+import { useContext } from 'react';
 import './ContactForm.scss';
 import { store } from '../../App';
 
 const ContactForm = () => {
-  const [ state, dispatch ] = useContext(store);
+  const [ state, _dispatch ] = useContext(store);
 
   return (
     <form 
-      onSubmit={() => {}}
+      // onSubmit={() => {}}
       className={`contact-form 
         ${state.darkMode ? 'dark-card' : 'light-card'}
         ${state.darkMode ? 'dark-shadow' : 'light-shadow'}
