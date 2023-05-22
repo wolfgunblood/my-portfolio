@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { store } from '../../App';
 import './Image.scss';
 
-const Image = ({source, name}) => {
+const Image = ({source, name} :any) => {
 
-    const [ state , dispatch ] = useContext(store); 
+    const [ state , _dispatch ] = useContext(store); 
 
     return (
         <div className='skill-tab-item'>
