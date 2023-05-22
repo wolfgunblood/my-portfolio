@@ -7,7 +7,7 @@ import { BsArrowUpRight } from 'react-icons/bs';
 
 const Hero = () => {
 
-    const [state, dispatch] = useContext(store);
+    const [state, _dispatch] = useContext(store);
 
   return (
     <div className={`hero-container ${state.darkMode ? 'dark-bg-1' : 'light-bg-1'}`}>

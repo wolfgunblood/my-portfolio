@@ -1,12 +1,12 @@
-import React,{ useContext } from 'react';
+import { useContext } from 'react';
 import { store } from '../../App';
 import { GrFormClose, GrFormSubtract } from "react-icons/gr";
 import { CgExpand } from "react-icons/cg";
 import { IconContext } from "react-icons";
 import './TopBar.scss';
 
-const TopBar = ({active,handle}) => {
-    const [state, dispatch] = useContext(store);
+const TopBar = ({active,handle} :any) => {
+    const [state, _dispatch] = useContext(store);
 
     return (
         <div id={`${handle}`} className={`windows-top-bar ${state.darkMode ? "dark-top-bar" : "light-top-bar"}`}>
