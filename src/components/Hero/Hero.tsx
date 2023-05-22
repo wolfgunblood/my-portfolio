@@ -3,6 +3,7 @@ import './Hero.scss';
 import { store } from '../../App';
 import { motion } from 'framer-motion';
 import { BsArrowUpRight } from 'react-icons/bs';
+import scroll from '../../utils/helpers/scroll';
 
 
 const Hero = () => {
@@ -61,6 +62,7 @@ const Hero = () => {
             opacity: { duration: 0.2 , type: 'tween' },
             y: {duration: 0.5, type: 'spring'},
           }}
+          onClick={(e) => scroll("about-me")}
         >
           <h3>Find out more</h3>
           <BsArrowUpRight className='arrow-icon' size={20}/>
