@@ -3,7 +3,8 @@ import { store } from '../../App';
 import { motion } from 'framer-motion';
 import './Contact.scss';
 import ContactForm from '../ContactForm/ContactForm';
-import { ReactComponent as LinkedIn } from '../../assets/images/linkedin.svg';
+import { FaLinkedinIn,FaTwitter,FaWhatsapp } from 'react-icons/fa';
+import { AiOutlineGithub } from "react-icons/ai";
 
 const Contact = () => {
 
@@ -19,9 +20,9 @@ const Contact = () => {
         className={`eyebrow
           ${state.darkMode ? 'dark-eyebrow' : 'light-eyebrow'}
         `}
-        initial={{ y:200 }}
-        whileInView={{ y:0 }}
-        viewport={{ once:true }}
+        initial={{ y: 200 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
       >
         Contact
       </motion.h3>
@@ -29,11 +30,11 @@ const Contact = () => {
         className={`heading
           ${state.darkMode ? 'dark-heading' : 'light-heading'}
         `}
-        initial={{ y:150 }}
-        whileInView={{ y:0 }}
-        viewport={{ once:true }}
+        initial={{ y: 150 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
       >
-        Reach out to me any way you want. 
+        Reach out to me any way you want.
       </motion.h1>
       <p className={`${state.darkMode ? 'dark-eyebrow' : 'light-eyebrow'}`}>
         Fill in the form on te left side with you information and I will get back to you.
@@ -41,12 +42,12 @@ const Contact = () => {
 
       <div className='contact-data'>
         <motion.div
-          initial={{ x:-250,opacity:0}}
-          whileInView={{ x:0,opacity:1 }}
-          viewport={{ once:true }}
-          transition={{ 
-            opacity:{ duration: 0.3, delay: 0.3 },
-            x:{ duration: 0.8, type: 'spring', delay:0.25 },
+          initial={{ x: -250, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            opacity: { duration: 0.3, delay: 0.3 },
+            x: { duration: 0.8, type: 'spring', delay: 0.25 },
           }}
         >
           <ContactForm />
@@ -57,12 +58,12 @@ const Contact = () => {
             ${state.darkMode ? 'dark-card' : 'light-card'}
             ${state.darkMode ? 'dark-shadow' : 'light-shadow'}
           `}
-          initial={{ x:250, opacity:0 }}
-          whileInView={{ x:0, opacity:1 }}
-          viewport={{ once:true }}
-          transition={{ 
-            opacity:{ duration: 0.3, delay: 0.3 },
-            x:{ duration: 0.8, type: 'spring', delay:0.25 },
+          initial={{ x: 250, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            opacity: { duration: 0.3, delay: 0.3 },
+            x: { duration: 0.8, type: 'spring', delay: 0.25 },
           }}
         >
           <button
@@ -70,8 +71,32 @@ const Contact = () => {
               ${state.darkMode ? 'dark-field' : ''}
             `}
           >
-            <LinkedIn className={`svg ${state.darkMode ? 'dark-svg' : 'light-svg'}`} />
+            <FaLinkedinIn className={`svg ${state.darkMode ? 'dark-svg' : 'light-svg'}`} />
             LinkedIn
+          </button>
+          <button
+            className={`contact-socials-item  
+              ${state.darkMode ? 'dark-field' : ''}
+            `}
+          >
+            <FaTwitter className={`svg ${state.darkMode ? 'dark-svg' : 'light-svg'}`} />
+            Twitter
+          </button>
+          <button
+            className={`contact-socials-item  
+              ${state.darkMode ? 'dark-field' : ''}
+            `}
+          >
+            <FaWhatsapp className={`svg ${state.darkMode ? 'dark-svg' : 'light-svg'}`} />
+            WhatsApp
+          </button>
+          <button
+            className={`contact-socials-item 
+              ${state.darkMode ? 'dark-field' : ''}
+            `}
+          >
+            <AiOutlineGithub className={`svg ${state.darkMode ? 'dark-svg' : 'light-svg'}`} />
+            Github
           </button>
         </motion.section>
       </div>
