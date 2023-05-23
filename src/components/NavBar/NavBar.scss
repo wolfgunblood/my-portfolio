@@ -16,7 +16,7 @@ nav{
     padding: 4px 8px;
     backdrop-filter: blur(20px);
     box-sizing: border-box;
-   
+    // justify-content: space-evenly;
     
     @media screen and (max-width: 500px) {
         height: 40px;
@@ -79,7 +79,7 @@ nav{
     }
 
     button{
-        margin-left: 24px;
+        // margin-left: 24px;
         font-size: 15px;
         color: white;
         background-color: #0064FF;

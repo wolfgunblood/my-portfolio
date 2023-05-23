@@ -22,26 +22,27 @@ const NavBar = () => {
       // className='dark-nav'
     > */}
       <IconContext.Provider value={{ color: `${state.darkMode ? "white" : "black"}`, className: "wolf" }}>
-        <SiWolframlanguage size={30} />
+        <SiWolframlanguage size={30} onClick={(_e :any) => scroll("hero")}
+        />
       </IconContext.Provider>
 
       <h3
         onClick={(_e) => scroll("about-me")}
         className={`first  ${state.darkMode ? 'dark-anchor' : 'light-anchor'}`}
-        >
+      >
         About Me
       </h3>
 
       <h3
         onClick={(_e) => scroll("portfolio")}
         className={`${state.darkMode ? 'dark-anchor' : 'light-anchor'}`}
-        >
+      >
         Portfolio
       </h3>
       <h3
         onClick={(_e) => scroll("skills")}
         className={`${state.darkMode ? 'dark-anchor' : 'light-anchor'}`}
-        >
+      >
         Skills
       </h3>
       {/* <h3

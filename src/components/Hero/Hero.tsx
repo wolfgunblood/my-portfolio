@@ -13,9 +13,9 @@ const Hero = () => {
   return (
     <div className={`hero-container ${state.darkMode ? 'dark-bg-1' : 'light-bg-1'}`}>
         <div className='anchor' id='hero' />
-        <motion.div>
+        {/* <motion.div>
           Hi
-        </motion.div>
+        </motion.div> */}
         <motion.h2
           className={`${state.darkMode ? 'white-opacity' : 'light-eyebrow'}`}
           initial={{ opacity: 0, y: 140  }}
