@@ -26,12 +26,19 @@ const Project = ({ index } :any  ) => {
         setIsHovered(false);
     };
 
-    const loremipsum = [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        , "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        , "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        , "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    ];
+    // const loremipsum = [
+    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    //     , "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    //     , "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    //     , "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    // ];
+
+    const describe = [
+        "This project is a macOS clone built using React and TypeScript. It aims to recreate the familiar and intuitive user interface of macOS within a web application. The combination of React's component-based architecture, TypeScript's type safety, and the sleek design of macOS provides a seamless and responsive user experience. Users will be able to interact with a macOS-like interface, including windows, menus, and toolbars, offering cross-platform compatibility and the convenience of a familiar operating system within their web browser.",
+        "An React SPA to create a Trading Journal with. You can add, edit and delete input fields to put your data in. All of these changes are adopted by the preview Trading Journal in real-time. Once you are happy with the result, you can save and download your trading Journal to your local machine via a simple button click. Also comes with a functionality to autofill all fields and look at what the CV would look like if you filled it out by hand.",
+        "The Movie Search App, built using React and Material-UI (MUI), is a web application that enables users to search for movies and explore detailed information about them. With a sleek and responsive interface, the app allows users to easily search for movies by title, genre, or actor. It leverages the power of React to provide real-time search results and interactive user experiences. The integration of Material-UI ensures a modern and visually appealing design, with components that follow Google's Material Design guidelines. Discover and explore your favorite movies with the Movie Search App, where React and MUI come together to enhance your movie search and browsing experience.",
+        "The Sushi Shop Landing Page is a captivating and responsive web page built using React. It serves as an introduction to a virtual sushi shop, providing visitors with a visually appealing and immersive experience. With a focus on user engagement, the landing page showcases a wide range of sushi delicacies, enticing users to explore the menu and place their orders. The use of React allows for a seamless and interactive user interface, ensuring a smooth navigation experience. "
+    ]
     const builtOn = [
         "Bulit using TypeScript,React ...."
         , "Bulit using TypeScript,React ...."
@@ -104,7 +111,7 @@ const Project = ({ index } :any  ) => {
                         <TopBar active={!zActive} handle={"handle1"} />
                         <div className={`details__wrapper ${state.darkMode ? 'dark-wrapper' : 'light-wrapper'}`}>
                             <p className={`${state.darkMode ? 'dark-detail' : 'light-detail'}`}>
-                                {loremipsum[index]}
+                                {describe[index]}
                             </p>
                             <hr className="horizontal-line" />
                             <div className='details__footer'>
