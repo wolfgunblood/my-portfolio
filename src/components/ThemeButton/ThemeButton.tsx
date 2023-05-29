@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import './ThemeButton.scss'
 import { motion } from 'framer-motion';
 import { store } from '../../App';
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 const ThemeButton = () => {
     const [state, dispatch] = useContext(store);

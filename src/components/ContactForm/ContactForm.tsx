@@ -1,8 +1,8 @@
-import React, { useContext, useRef } from "react";
+import { useContext, useRef } from "react";
 import './ContactForm.scss';
 import { store } from '../../App';
 import emailjs from "@emailjs/browser";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 
 

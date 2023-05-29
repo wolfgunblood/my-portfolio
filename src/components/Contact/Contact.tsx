@@ -5,7 +5,7 @@ import './Contact.scss';
 import ContactForm from '../ContactForm/ContactForm';
 import { FaLinkedinIn,FaTwitter,FaWhatsapp } from 'react-icons/fa';
 import { AiOutlineGithub } from "react-icons/ai";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 const Contact = () => {
 

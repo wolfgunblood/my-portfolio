@@ -62,7 +62,7 @@ const Hero = () => {
             opacity: { duration: 0.2 , type: 'tween' },
             y: {duration: 0.5, type: 'spring'},
           }}
-          onClick={(e) => scroll("about-me")}
+          onClick={(_e) => scroll("about-me")}
         >
           <h3>Find out more</h3>
           <BsArrowUpRight className='arrow-icon' size={20}/>
