@@ -23,6 +23,8 @@ import {
   Tailwind,
   Typescript,
   VSCode,
+  Firebase,
+  NodeJS,
 } from '../../assets';
 
 const SkillTab = ({ topic }: any) => {
@@ -64,7 +66,7 @@ const SkillTab = ({ topic }: any) => {
           {topic === "libraries" ? "Libraries" : null}
           {topic === "frameworks" ? "Frameworks" : null}
           {topic === "collaborative" ? "Collaborative Work" : null}
-          {topic === "prototyping" ? "Prototyping" : null}
+          {topic === "prototyping" ? "Backend" : null}
           {topic === "code" ? "Code Editor" : null}
         </h3>
         {topic === "languages" ? (
@@ -102,8 +104,8 @@ const SkillTab = ({ topic }: any) => {
         ) : null}
         {topic === "prototyping" ? (
           <div className='skill-tab-list'>
-            <Image source={Figma} name="Figma" />
-            <Image source={Photoshop} name="Photoshop" />
+            <Image source={Firebase} name="Firebase" />
+            <Image source={NodeJS} name="Node.js" /> 
           </div>
         ) : null}
         {topic === "code" ? (

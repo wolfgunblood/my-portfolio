@@ -18,3 +18,5 @@ export {default as Tailwind } from './images/tailwind.png';
 export {default as Theodinproject} from './images/theodinproject.png';
 export {default as Typescript } from './images/typescript.png'; 
 export {default as VSCode } from './images/vscode.png';
+export {default as Firebase } from './images/firebase.png';
+export {default as NodeJS } from './images/nodejs.png';
