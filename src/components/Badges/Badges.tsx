@@ -8,7 +8,7 @@ import { AiOutlineGithub } from 'react-icons/ai';
 
 const Badges = ({ index }: any) => {
     return (
-        <div className='badges-container'>
+        <div className= {`badges-container badges-container-${index}`}>
             {index === 0 &&
                 (
                     <button className='badge-btn typescript-badge'>
