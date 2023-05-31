@@ -36,7 +36,7 @@ const Project = ({ index } :any  ) => {
     const title = [
         "MacOS Clone"
         , "Trading Jounal"
-        , "Movie Searchi"
+        , "Movie Search"
         , "Sushi-Shop Landing"
     ];
     const describe = [
