@@ -10,6 +10,8 @@ import Preview2 from '../../assets/images/preview2.png';
 import Preview3 from '../../assets/images/preview3.png';
 import Preview4 from '../../assets/images/preview4.png';
 import Draggable from 'react-draggable';
+import Badges from '../Badges/Badges';
+
 
 const Project = ({ index } :any  ) => {
     const [state, _dispatch] = useContext(store);
@@ -121,8 +123,8 @@ const Project = ({ index } :any  ) => {
                             </p>
                             <hr className="horizontal-line" />
                             <div className='details__footer'>
-                                <div>
-                                </div>
+                                <Badges />
+                                
                                 <div className='btn-group'>
                                     <button
                                         onClick={(e) => { e.stopPropagation(); }}
