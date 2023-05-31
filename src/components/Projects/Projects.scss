@@ -88,6 +88,7 @@
                     box-sizing: border-box;
                     // align-items: center;
                     box-shadow: 0px 40px 70px #050505;
+                   
                     // color: #fff;
                     border-radius: 0 0 10px 10px;
 
@@ -142,10 +143,11 @@
         display: flex;
         justify-content: space-between;
         margin-right: 30px;
+        
 
         button {
             display: flex;
-            gap: 2px;
+            gap: 4px;
 
             color: white;
             background-color: #0064FF;
@@ -168,7 +170,7 @@
     }
 }
 
-.light-wrapper-0 {
+.light-wrapper-3 {
     // background-color: #f8e9eb;
     // background-color: #ADD8E6;
     /* Light Blue */
@@ -214,7 +216,7 @@
     
 }
 
-.light-wrapper-3 {
+.light-wrapper-0 {
     background-color: #f6e9ea;
     // background-color: #f8e9eb;
     // background-color: #ADD8E6;
