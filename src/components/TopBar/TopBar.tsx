@@ -10,7 +10,7 @@ const TopBar = ({active,handle,titleName,index,check} :any) => {
     
     return (
         <div id={`${handle}`} className={`windows-top-bar ${state.darkMode ? "dark-top-bar" : check ? "light-top-bar" : `${"light-top-bar-"+index}`}`}>
-            <div className='windows-controls'>
+            {/* <div className='windows-controls'>
                 <button
                     className={`windows-control ${active ? 'close-window' : state.darkMode ? 'notActive-darkMode' :  'notActive-lightMode'}`}
                 >
@@ -32,7 +32,7 @@ const TopBar = ({active,handle,titleName,index,check} :any) => {
                         <CgExpand />
                     </IconContext.Provider>
                 </button>
-            </div>
+            </div> */}
             <div className='topbar-heading'>
                 <h4 className = {` ${state.darkMode ? 'dark-heading' : 'light-heading'}`} >{titleName}</h4>
                 {/* {console.log(titleName)} */}
