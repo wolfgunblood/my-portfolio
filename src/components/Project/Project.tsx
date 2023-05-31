@@ -110,7 +110,7 @@ const Project = ({ index } :any  ) => {
                     >
                         <TopBar active={!zActive} handle={"handle1"} />
                         <div className={`details__wrapper ${state.darkMode ? 'dark-wrapper' : 'light-wrapper'}`}>
-                            <p className={`${state.darkMode ? 'dark-detail' : 'light-detail'}`}>
+                            <p className={`details__text ${state.darkMode ? 'dark-detail' : 'light-detail'}`}>
                                 {describe[index]}
                             </p>
                             <hr className="horizontal-line" />

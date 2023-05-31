@@ -89,10 +89,13 @@
                     // color: #fff;
                     border-radius: 0 0 10px 10px;
 
-                    p {
+                    .details__text {
                         padding: 2%;
                         // color: whitesmoke;
-                        letter-spacing: 0.25em;
+                        letter-spacing: 0.05em;
+                        font-size: 18px;
+                        font-family: var(--plus-jakarta-san);
+                        font-weight: 400;
                     }
                 }
             }
