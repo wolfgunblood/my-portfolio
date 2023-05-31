@@ -5,7 +5,7 @@ import { CgExpand } from "react-icons/cg";
 import { IconContext } from "react-icons";
 import './TopBar.scss';
 
-const TopBar = ({active,handle} :any) => {
+const TopBar = ({active,handle,titleName} :any) => {
     const [state, _dispatch] = useContext(store);
 
     return (
@@ -32,6 +32,10 @@ const TopBar = ({active,handle} :any) => {
                         <CgExpand />
                     </IconContext.Provider>
                 </button>
+            </div>
+            <div className='topbar-heading'>
+                <h4 className = {` ${state.darkMode ? 'dark-heading' : 'light-heading'}`} >{titleName}</h4>
+                {/* {console.log(titleName)} */}
             </div>
         </div>
     )
