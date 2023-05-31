@@ -20,6 +20,8 @@ const Project = ({ index }: any) => {
 
     const [_isHovered, setIsHovered] = useState(false);
 
+    const isDescription = false;
+
     const handleMouseEnter = () => {
         setIsHovered(true);
     };
@@ -99,7 +101,7 @@ const Project = ({ index }: any) => {
                             setZActive_2(false)
                         }}
                     >
-                        <TopBar active={zActive} titleName={title[index]} handle={"handle"} />
+                        <TopBar check={!isDescription} index={index} active={zActive} titleName={title[index]} handle={"handle"} />
                         <div className='imageWrapper'>
                             <img src={preview[index]} alt="Screenshot of Framer Motion" />
                         </div>
@@ -116,8 +118,8 @@ const Project = ({ index }: any) => {
                             setZActive_2(true);
                         }}
                     >
-                        <TopBar active={!zActive} titleName={title[index]} handle={"handle1"} />
-                        <div className={`details__wrapper ${state.darkMode ? 'dark-wrapper' : 'light-wrapper'}`}>
+                        <TopBar check={isDescription} index={index} active={!zActive} titleName={title[index]} handle={"handle1"} />
+                        <div className={`details__wrapper ${state.darkMode ? 'dark-wrapper' : `${'light-wrapper-'+index}` }`}>
                             <p className={`details__text ${state.darkMode ? 'dark-detail' : 'light-detail'}`}>
                                 {describe[index]}
                             </p>
