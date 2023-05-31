@@ -1,0 +1,12 @@
+.badges-container{
+    width: 40%;
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+    // align-items: center;
+    justify-content: flex-start;
+
+    .badge-btn{
+        padding: 2%;
+    }
+}
