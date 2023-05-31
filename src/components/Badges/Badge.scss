@@ -1,4 +1,4 @@
-.badges-container{
+.badges-container {
     width: 40%;
     display: flex;
     gap: 7px;
@@ -6,7 +6,65 @@
     // align-items: center;
     justify-content: flex-start;
 
-    .badge-btn{
-        padding: 2%;
+    .badge-btn {
+        padding: 2% 4%;
+        display: flex;
+        gap: 3px;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 46px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+
+        p {
+            letter-spacing: 0.05em;
+            font-size: 14px;
+            font-family: var(--plus-jakarta-san);
+            font-weight: 400;
+        }
+    }
+
+    .typescript-badge {
+        background-color: #007ACC;
+        /* Replace with your desired background color */
+        color: #ffffff;
+        /* Set the text color for visibility */
+
+    }
+
+    .react-badge {
+        background-color: #61DAFB;
+        color: #ffffff;
+    }
+    .javascript-badge {
+        background-color: #FFFF00;
+        color: #333333;
+    }
+
+    .sass-badge {
+        background-color: #FF69B4;
+        color: #ffffff;
+    }
+
+    .redux-badge {
+        background-color: #800080;
+        color: #ffffff;
+    }
+
+    .framer-motion-badge {
+        background-color: #0055FF;
+        color: #ffffff;
+    }
+
+    .git-badge {
+        background-color: #FFA500;
+        color: #333333;
+    }
+
+    .github-badge {
+        background-color: #333333;
+        color: #ffffff;
     }
 }

@@ -13,7 +13,7 @@ import Draggable from 'react-draggable';
 import Badges from '../Badges/Badges';
 
 
-const Project = ({ index } :any  ) => {
+const Project = ({ index }: any) => {
     const [state, _dispatch] = useContext(store);
     const [zActive, setZActive] = React.useState(false);
     const [zActive_2, setZActive_2] = React.useState(true);
@@ -109,8 +109,8 @@ const Project = ({ index } :any  ) => {
                     handle="#handle1"
                     axis='x'
                 >
-                    <div 
-                        className={`project__details ${zActive_2 ? 'zActive' : ''}`} 
+                    <div
+                        className={`project__details ${zActive_2 ? 'zActive' : ''}`}
                         onClick={() => {
                             setZActive(false);
                             setZActive_2(true);
@@ -123,8 +123,8 @@ const Project = ({ index } :any  ) => {
                             </p>
                             <hr className="horizontal-line" />
                             <div className='details__footer'>
-                                <Badges />
-                                
+                                <Badges index ={index} />
+
                                 <div className='btn-group'>
                                     <button
                                         onClick={(e) => { e.stopPropagation(); }}
