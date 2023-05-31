@@ -121,7 +121,8 @@ const Project = ({ index } :any  ) => {
                             </p>
                             <hr className="horizontal-line" />
                             <div className='details__footer'>
-                                <p className={`footer__text ${state.darkMode ? 'dark-detail' : 'light-detail'}`}>{builtOn[index]}</p>
+                                <div>
+                                </div>
                                 <div className='btn-group'>
                                     <button
                                         onClick={(e) => { e.stopPropagation(); }}
