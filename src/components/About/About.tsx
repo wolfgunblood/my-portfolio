@@ -26,66 +26,26 @@ const About = () => {
         My Tech Stack and Expertise.
       </motion.h1>
 
-      {/* <div className='intro-container'>
+      <div className='intro-container'>
         <section
           className={`left-intro big-card ${state.darkMode ? 'dark-card' : 'light-card'}`}
         >
           <h3
             className={`${state.darkMode ? 'dark-heading' : 'light-heading'}`}
-          >React Developer</h3>
+          >Full Stack Developer</h3>
           <p
             className={`${state.darkMode ? 'dark-eyebrow' : 'light-eyebrow'}`}
           >
-            Starting with HTML, CSS and JavaScript,
-            I taught myself programming on my own.
-            However, nowadays there is a lot to discover far beyond vanilla JavaScript:
-            Today I work with TypeScript in React, use Redux or Context for state management
-            and use SASS as a pre-processor for CSS.
-            As you can see, I also like to work with motion libraries -
-            e.g. Framer Motion.
+            Starting with the fundamentals of HTML, CSS, and JavaScript, I embarked on a self-guided programming journey, continuously expanding my skills beyond the basics. 
+            Today, my primary focus lies in TypeScript and React, leveraging the benefits of type safety and enhanced development experience. 
+            Depending on the specific requirements of each project, I make use of either Redux or Context API for efficient state management.
+            To streamline my CSS workflow and promote maintainability, I rely on SASS as a pre-processor.
+            Furthermore, I find great joy in incorporating motion libraries like Framer Motion to infuse my applications with captivating animations and interactive elements. 
+            Beyond coding, I am enthusiastic about trading stocks and options, as well as pursuing music production as engaging hobbies during my free time.
           </p>
         </section>
-        <section className='right-intro'>
-          <motion.div
-            className={`small-card ${state.darkMode ? 'dark-card' : 'light-card'}`}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-          >
-            <div className='card-top'>
-              <h2>
-                200
-              </h2>
-            </div>
-          </motion.div>
-          <motion.div
-            className={`small-card ${state.darkMode ? 'dark-card' : 'light-card'}`}
-            initial={{ opacity: 0 }}
-            transition={{ delay: 0.2 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-          >
-            <div className='card-top'>
-              <h2>
-                200
-              </h2>
-            </div>
-          </motion.div>
-          <motion.div
-            className={`small-card ${state.darkMode ? 'dark-card' : 'light-card'}`}
-            initial={{ opacity: 0 }}
-            transition={{ delay: 0.3 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-          >
-            <div className='card-top'>
-              <h2>
-                200
-              </h2>
-            </div>
-          </motion.div>
-        </section>
-      </div> */}
+
+      </div>
     </div>
   )
 }

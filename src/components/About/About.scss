@@ -80,10 +80,11 @@
 }
 
 .intro-container{
-    margin-top: 135px;
+    margin-top: 55px;
     display: flex;
     gap: 30px;
     position: relative;
+    width: 70vw;
 
     .big-card {
         border-radius: 28px;
@@ -91,23 +92,24 @@
 
         h3{
             max-width: 550px;
-            letter-spacing: -0.02em;
             font-size: 32px;
-            font-family: 'Times New Roman', Times, serif;
-            font-weight: 600;
+            font-family: var(--playfair-display);
+            font-weight: 700;
+            letter-spacing: -0.02em;
         }
         p{
-            max-width: 550px;
-            letter-spacing: -0.025em;
-            font-size: 20px;
-            font-family: 'Times New Roman', Times, serif;
-            font-weight: 600;
+            // max-width: 550px;
             margin-top: 25px;
+            letter-spacing: -0.02em;
+            // letter-spacing: 0.05em;
+            font-size: 18px;
+            font-family: var(--plus-jakarta-san);
+            font-weight: 600;
             line-height: 1.5;
         }
     }
-    .right-intro{
-        display: flex;
-        flex-direction: column;
-    }
+    // .right-intro{
+    //     display: flex;
+    //     flex-direction: column;
+    // }
 }
