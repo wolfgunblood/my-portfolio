@@ -33,12 +33,13 @@
 
                 #draggable {
                     height: 40px;
-                    cursor:move;
+                    cursor: move;
                 }
+
                 // z-index: 2;
                 // border-radius: 10px;
                 // transition: 5s all ease-in-out;
-             
+
 
                 .imageWrapper {
                     width: 100%;
@@ -70,7 +71,7 @@
 
                 #draggable1 {
                     height: 40px;
-                    cursor:move;
+                    cursor: move;
                 }
 
                 .details__wrapper {
@@ -80,7 +81,7 @@
                     // height: 70vw;
                     flex-direction: column;
                     align-items: center;
-
+                    padding: 2%;
                     // background-color: #1e1f23;
                     // border-radius: 4px;
                     box-sizing: border-box;
@@ -90,7 +91,7 @@
                     border-radius: 0 0 10px 10px;
 
                     .details__text {
-                        padding: 2%;
+                        // padding: 2%;
                         // color: whitesmoke;
                         letter-spacing: 0.05em;
                         font-size: 18px;
@@ -155,7 +156,11 @@
             cursor: pointer;
 
             p {
-                font-size: 12px;
+
+                letter-spacing: 0.05em;
+                font-size: 14px;
+                font-family: var(--plus-jakarta-san);
+                font-weight: 400;
             }
         }
 
