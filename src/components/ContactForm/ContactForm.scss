@@ -1,10 +1,12 @@
-.contact-form{
+.contact-form {
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-    padding: 18px;
+    // padding: 18px;
+    padding: 22px 24px;
 
-    .field{
+
+    .field {
         outline: none;
         border-radius: 6px;
         padding: 10px 14px;
@@ -17,6 +19,7 @@
             border: 2px solid #0064ff;
         }
     }
+
     .submit {
         background-color: #0064ff;
         color: white;
@@ -35,12 +38,13 @@
             transform: scale(0.98);
         }
     }
+
     textarea {
         width: 440px;
         min-width: 440px;
         max-width: 440px;
-        max-height: 225px;
-        min-height: 225px;
+        max-height: 250px;
+        min-height: 250px;
         margin-bottom: 16px;
         margin-top: 10px;
 
@@ -73,7 +77,7 @@
             min-width: 300px;
             max-width: 300px;
         }
-        
+
         @media screen and (max-width: 425px) {
             width: 270px;
             min-width: 270px;

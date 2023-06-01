@@ -67,6 +67,7 @@ const Contact = () => {
             opacity: { duration: 0.3, delay: 0.3 },
             x: { duration: 0.8, type: 'spring', delay: 0.25 },
           }}
+          className='contact-form-container'
         >
           <ContactForm />
         </motion.div>

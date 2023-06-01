@@ -43,6 +43,11 @@
         display: flex;
         gap: 22px;
 
+        .contact-form-container{
+            // height: 100%;
+            // padding: 22px 24px;
+        }
+
         .contact-socials-container{
             display: flex;
             flex-direction: column;
