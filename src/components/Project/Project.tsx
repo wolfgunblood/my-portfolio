@@ -1,7 +1,8 @@
 import React, { useState, useContext } from 'react';
 import './Project.scss'
 import TopBar from '../TopBar/TopBar';
-import { BsArrowUpRight } from 'react-icons/bs';
+import { BsFillTerminalFill } from 'react-icons/bs';
+import { AiFillEye } from "react-icons/ai";
 import { store } from '../../App';
 // import { motion } from 'framer-motion';
 import { motion, Variants } from "framer-motion";
@@ -133,15 +134,15 @@ const Project = ({ index }: any) => {
                                         onMouseEnter={handleMouseEnter}
                                         onMouseLeave={handleMouseLeave}
                                     >
-                                        <p>LIVE</p>
-                                        <BsArrowUpRight size={15} />
+                                        <p>PREVIEW</p>
+                                        <AiFillEye size={18} />
                                         {/* {isHovered ? <BsArrowRight size={15} /> : <BsArrowUpRight size={15} />} */}
                                     </button>
                                     <button onClick={(e) => { e.stopPropagation(); }}>
                                         <p>
                                             CODE
                                         </p>
-                                        <BsArrowUpRight size={15} />
+                                        <BsFillTerminalFill size={18} />
                                         {/* {isHovered ? <BsArrowRight size={15} /> : <BsArrowUpRight size={15} />} */}
                                     </button>
                                 </div>
