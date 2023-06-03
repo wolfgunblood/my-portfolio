@@ -26,6 +26,14 @@ ul {
     flex-direction: column;
     gap: 10px;
 
+    .close-btn{
+        background-color: transparent;
+        height: 30px;
+        width: 30px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
     .color-btn {
         height: 30px;
         width: 30px;

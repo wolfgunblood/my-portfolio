@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import { store } from '../../App';
 import toast from "react-hot-toast";
 import updateSysColor from '../../utils/helpers/updateSysColor';
+import { AiOutlineCloseCircle } from "react-icons/ai";
+
 
 const ColorPalette = () => {
     const [state, dispatch] = useContext(store);
@@ -13,36 +15,55 @@ const ColorPalette = () => {
 
         updateSysColor(target.id);
     }
-    return (
-        <>
-            {!state.darkMode && state.colorMode &&
-                (<motion.button
-                    initial={{ x: -10 }}
-                    animate={{ x: 0 }}
-                    transition={{ type: 'spring', duration: 0.2 }}
-                    className={`color-palette-btn
+    const handleColor = () => {
+        dispatch({ type: "colormode/TOGGLE" });
+        toast.error("Color mode Closed",
+        {
+                position: "top-left",
+                style: {
+                    borderRadius: '10px',
+                    background: '#fff',
+                    color: '#333',
+                },
+            });
+    
+    }
+
+return (
+    <>
+        {!state.darkMode && !state.colorMode &&
+            (<motion.button
+                initial={{ x: -100 }}
+                animate={{ x: 0 }}
+                transition={{ type: 'spring', duration: 0.2 }}
+                className={`color-palette-btn
                     ${state.darkode ? 'dark-color-palette' : 'light-color-palette'} 
                     `}
-                // onClick={handleTheme}
-                >
-                    <ul className='color-palette'>
-                        <li>
-                            <button className='color-btn color-btn1' id='babybrown' onClick={colorChange}></button>
-                        </li>
-                        <li>
-                            <button className='color-btn color-btn2' id='babyblue' onClick={colorChange}></button>
-                        </li>
-                        <li>
-                            <button className='color-btn color-btn3' id='babypink' onClick={colorChange}></button>
-                        </li>
-                        <li>
-                            <button className='color-btn color-btn4' id='babypurple' onClick={colorChange}></button>
-                        </li>
-                    </ul>
-                </motion.button>) 
-            }
-        </>
-    )
+            // onClick={handleTheme}
+            >
+                <ul className='color-palette'>
+                    <li>
+                        <button className='color-btn color-btn1' id='babybrown' onClick={colorChange}></button>
+                    </li>
+                    <li>
+                        <button className='color-btn color-btn2' id='babyblue' onClick={colorChange}></button>
+                    </li>
+                    <li>
+                        <button className='color-btn color-btn3' id='babypink' onClick={colorChange}></button>
+                    </li>
+                    <li>
+                        <button className='color-btn color-btn4' id='babypurple' onClick={colorChange}></button>
+                    </li>
+                    <li>
+                        <button onClick={handleColor} className='close-btn'>
+                            <AiOutlineCloseCircle size={25} />
+                        </button>
+                    </li>
+                </ul>
+            </motion.button>)
+        }
+    </>
+)
 }
 
 export default ColorPalette
