@@ -1,6 +1,6 @@
 const sampleStore = {
     darkMode: false,
-    colorMode: false,
+    colorMode: true,
     currentColor: "babybrown",
 }
 
