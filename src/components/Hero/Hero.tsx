@@ -47,7 +47,7 @@ const Hero = () => {
             y: {duration: 0.5, type: 'spring'}
         }}
         >
-          Frontend Developer
+          Full Stack Developer
         </motion.h1>
         <motion.h4
           className={`${state.darkMode ? 'white-opacity-max' : 'light-phrase'}`}
