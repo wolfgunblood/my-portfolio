@@ -119,6 +119,14 @@
     }
 }
 
+.light-color-palette{
+    color: #1d1d1f;
+    background-color: white;
+    border: none;
+    transition: 0.3s all;
+    font-size: 14px;
+}
+
 //dark mode 
 
 .dark-theme-button {
@@ -131,6 +139,15 @@
     &:hover{
         background-color: #0064FF;
     }
+}
+.dark-color-palette {
+    border: 2px solid hsla(0,0%,51.4%,0.16);
+    background-color: #141414;
+    color: white;
+    font-size: 14px;
+    transition: 0.3s background-color, 0.2s color, 0.2s border;
+
+    
 }
 
 .dark-context-menu {

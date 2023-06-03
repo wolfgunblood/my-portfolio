@@ -11,6 +11,7 @@ import Skills from './components/Skills/Skills';
 import Contact from './components/Contact/Contact';
 import { Toaster } from "react-hot-toast";
 import ColorButton from './components/ColorButton/ColorButton';
+import ColorPalette from './components/ColorPalette/ColorPalette';
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const store = createContext<any>(null);
@@ -29,7 +30,8 @@ const App = () => {
       >
         <Toaster />
         <NavBar />
-        <ColorButton />
+        <ColorPalette />
+        {/* <ColorButton /> */}
         <ThemeButton />
         <Hero />
         <About />
