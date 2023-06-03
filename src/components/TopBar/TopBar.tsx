@@ -1,11 +1,11 @@
 import { useContext } from 'react';
 import { store } from '../../App';
-import { GrFormClose, GrFormSubtract } from "react-icons/gr";
-import { CgExpand } from "react-icons/cg";
-import { IconContext } from "react-icons";
-import './TopBar.scss';
+// import { GrFormClose, GrFormSubtract } from "react-icons/gr";
+// import { CgExpand } from "react-icons/cg";
+// import { IconContext } from "react-icons";
+import "./TopBar.scss";
 
-const TopBar = ({active,handle,titleName,index,check} :any) => {
+const TopBar = ({handle,titleName,check} :any) => {
     const [state, _dispatch] = useContext(store);
     
     return (

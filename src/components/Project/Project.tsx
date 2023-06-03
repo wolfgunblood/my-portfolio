@@ -50,12 +50,6 @@ const Project = ({ index }: any) => {
         "The Movie Search App, built using React and Material-UI (MUI), is a web application that enables users to search for movies and explore detailed information about them. With a sleek and responsive interface, the app allows users to easily search for movies by title, genre, or actor. It leverages the power of React to provide real-time search results and interactive user experiences. The integration of Material-UI ensures a modern and visually appealing design, with components that follow Google's Material Design guidelines.",
         "The Sushi Shop Landing Page is a captivating and responsive web page built using React. It serves as an introduction to a virtual sushi shop, providing visitors with a visually appealing and immersive experience. With a focus on user engagement, the landing page showcases a wide range of sushi delicacies, enticing users to explore the menu and place their orders. The use of React allows for a seamless and interactive user interface, ensuring a smooth navigation experience. "
     ]
-    const builtOn = [
-        "Bulit using TypeScript,React ...."
-        , "Bulit using TypeScript,React ...."
-        , "Bulit using TypeScript,React ...."
-        , "Bulit using TypeScript,React ...."
-    ];
     const preview = [
         Preview1,
         Preview2,

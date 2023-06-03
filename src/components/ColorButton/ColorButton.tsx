@@ -3,7 +3,6 @@ import './ColorButton.scss'
 import { motion } from 'framer-motion';
 import { store } from '../../App';
 import toast from "react-hot-toast";
-import { AiOutlineCloseCircle } from "react-icons/ai";
 
 const ColorButton = () => {
     const [state, dispatch] = useContext(store);

@@ -1,4 +1,3 @@
-import React from 'react';
 import "./Badge.scss";
 import { SiTypescript, SiRedux, SiJavascript } from 'react-icons/si';
 import { FaReact, FaSass, FaGitAlt } from 'react-icons/fa';
