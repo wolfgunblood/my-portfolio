@@ -28,6 +28,9 @@
   --color-white: #fff;
   --color-creamson: #fffaf3;
   /* --color-creamson: #dad2d2; */
+
+  --info-color: #f6e9ea;
+  --tab-color: #f4dbdd;
 }
 
 * {

@@ -108,7 +108,7 @@
     border-bottom: 1px solid #696971;
 }
 .light-top-bar-info {
-    background-color: #f4dbdd;
+    background-color: var(--tab-color);
     transition: 0.3s background;
     border-bottom: 1px solid #696971;
 }
