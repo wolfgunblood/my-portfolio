@@ -8,7 +8,9 @@ const ColorButton = () => {
     const [state, dispatch] = useContext(store);
     //   const { theme } = state;
 
-    const handleTheme = () => {
+    const handleColor = () => {
+        dispatch({type:"colormode/TOGGLE"});
+        {console.log(state)}
         if (!state.darkMode) {
             toast('Hello Color Mode!',
                 {
@@ -45,10 +47,11 @@ const ColorButton = () => {
                 className={`color-button
                 ${state.darkmode ? 'dark-theme-button' : 'light-theme-button'} 
             `}
-                onClick={handleTheme}
+                onClick={handleColor}
             >
                 <h4>
-                    {'Open Colors'}
+                    {state.colorMode ? 'Colors' : 'Close'}
+                    
                 </h4>
             </motion.button>
         </>

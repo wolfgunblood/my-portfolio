@@ -31,7 +31,7 @@ const App = () => {
         <Toaster />
         <NavBar />
         <ColorPalette />
-        {/* <ColorButton /> */}
+        <ColorButton />
         <ThemeButton />
         <Hero />
         <About />

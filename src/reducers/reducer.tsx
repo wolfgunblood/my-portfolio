@@ -10,6 +10,13 @@ const reducer = (state = sampleStore, action: any) => {
                 darkMode: !state.darkMode,
             };
             return darkmode;
+        case 'colormode/TOGGLE':
+            // eslint-disable-next-line no-case-declarations
+            const colormode = {
+                ...state,
+                colorMode: !state.colorMode,
+            };
+            return colormode;
         default:
             return state;
     }
