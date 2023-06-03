@@ -17,6 +17,13 @@ const reducer = (state = sampleStore, action: any) => {
                 colorMode: !state.colorMode,
             };
             return colormode;
+        case 'currentColor/TOGGLE':
+            // eslint-disable-next-line no-case-declarations
+            const currentColor  = {
+                ...state,
+                currentColor: action.payload,
+            };
+            return currentColor;
         default:
             return state;
     }

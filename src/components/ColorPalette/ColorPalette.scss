@@ -40,8 +40,12 @@ ul {
         border: gray;
         outline: none;
         border-radius: 6px;
-
         cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.2s all;
         
     }
     .color-btn1{
