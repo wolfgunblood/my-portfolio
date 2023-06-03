@@ -9,8 +9,8 @@ const ColorButton = () => {
     //   const { theme } = state;
 
     const handleColor = () => {
-        dispatch({type:"colormode/TOGGLE"});
-        {console.log(state)}
+        dispatch({ type: "colormode/TOGGLE" });
+        { console.log(state) }
         if (!state.darkMode) {
             toast('Hello Color Mode!',
                 {
@@ -40,20 +40,22 @@ const ColorButton = () => {
 
     return (
         <>
-            <motion.button
-                initial={{ y: 150 }}
-                animate={{ y: 0 }}
-                transition={{ type: 'spring', duration: 0.2 }}
-                className={`color-button
-                ${state.darkmode ? 'dark-theme-button' : 'light-theme-button'} 
+            {!state.darkMode &&
+                <motion.button
+                    initial={{ x: -150 }}
+                    animate={{ x: 0 }}
+                    transition={{ type: 'spring', duration: 0.2 }}
+                    className={`color-button
+                ${state.darkMode ? 'dark-theme-button' : 'light-theme-button'} 
             `}
-                onClick={handleColor}
-            >
-                <h4>
-                    {state.colorMode ? 'Colors' : 'Close'}
-                    
-                </h4>
-            </motion.button>
+                    onClick={handleColor}
+                >
+                    <h4>
+                        {state.colorMode ? 'Colors' : 'Close'}
+
+                    </h4>
+                </motion.button>
+            }
         </>
     )
 }
