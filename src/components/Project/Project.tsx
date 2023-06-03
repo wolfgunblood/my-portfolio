@@ -62,6 +62,19 @@ const Project = ({ index }: any) => {
         Preview3,
         Preview4,
     ];
+    const codePreview = [
+        "macos",
+        "trading-journal",
+        "movie-search",
+        "sushi-landing-page",
+    ];
+
+    const livepreview = [
+        "https://wolfgunblood.github.io/macos/",
+        "https://wolfgunblood.github.io/trading-journal/",
+        "https://movie-search-app-react-mui.netlify.app/",
+        "https://wolfgunblood.github.io/sushi-landing-page/",
+    ];
 
     const projectVariants: Variants = {
         offscreen: {
@@ -120,31 +133,43 @@ const Project = ({ index }: any) => {
                         }}
                     >
                         <TopBar check={isDescription} index={index} active={!zActive} titleName={title[index]} handle={"handle1"} />
-                        <div className={`details__wrapper ${state.darkMode ? 'dark-wrapper' : 'light-wrapper' }`}>
+                        <div className={`details__wrapper ${state.darkMode ? 'dark-wrapper' : 'light-wrapper'}`}>
                             <p className={`details__text ${state.darkMode ? 'dark-detail' : 'light-detail'}`}>
                                 {describe[index]}
                             </p>
                             <hr className="horizontal-line" />
                             <div className='details__footer'>
-                                <Badges index ={index} />
+                                <Badges index={index} />
 
                                 <div className='btn-group'>
-                                    <button
-                                        onClick={(e) => { e.stopPropagation(); }}
-                                        onMouseEnter={handleMouseEnter}
-                                        onMouseLeave={handleMouseLeave}
+                                    <a
+                                        href={`${livepreview[index]}`}
+                                        target="_blank"
+
                                     >
-                                        <p>PREVIEW</p>
-                                        <AiFillEye size={18} />
-                                        {/* {isHovered ? <BsArrowRight size={15} /> : <BsArrowUpRight size={15} />} */}
-                                    </button>
-                                    <button onClick={(e) => { e.stopPropagation(); }}>
-                                        <p>
-                                            CODE
-                                        </p>
-                                        <BsFillTerminalFill size={18} />
-                                        {/* {isHovered ? <BsArrowRight size={15} /> : <BsArrowUpRight size={15} />} */}
-                                    </button>
+                                        <button
+                                            onClick={(e) => { e.stopPropagation(); }}
+                                            onMouseEnter={handleMouseEnter}
+                                            onMouseLeave={handleMouseLeave}
+                                        >
+                                            <p>PREVIEW</p>
+                                            <AiFillEye size={18} />
+                                            {/* {isHovered ? <BsArrowRight size={15} /> : <BsArrowUpRight size={15} />} */}
+                                        </button>
+                                    </a>
+                                    <a
+                                        href={`${'https://github.com/wolfgunblood/'+codePreview[index]}`}
+                                        target="_blank"
+
+                                    >
+                                        <button onClick={(e) => { e.stopPropagation(); }}>
+                                            <p>
+                                                CODE
+                                            </p>
+                                            <BsFillTerminalFill size={18} />
+                                            {/* {isHovered ? <BsArrowRight size={15} /> : <BsArrowUpRight size={15} />} */}
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
