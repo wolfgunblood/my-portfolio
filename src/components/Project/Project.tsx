@@ -120,7 +120,7 @@ const Project = ({ index }: any) => {
                         }}
                     >
                         <TopBar check={isDescription} index={index} active={!zActive} titleName={title[index]} handle={"handle1"} />
-                        <div className={`details__wrapper ${state.darkMode ? 'dark-wrapper' : `${'light-wrapper-'+index}` }`}>
+                        <div className={`details__wrapper ${state.darkMode ? 'dark-wrapper' : 'light-wrapper' }`}>
                             <p className={`details__text ${state.darkMode ? 'dark-detail' : 'light-detail'}`}>
                                 {describe[index]}
                             </p>
