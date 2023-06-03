@@ -9,7 +9,7 @@
 A portfolio website built for myself to show off projects, my tech stack, skills and UI/UX expertise.
 
 ## 🔴 Demo
-🧪 [Live Demo]() available. Click "Live Demo" to open it.
+🧪 [Live Demo](https://wolfgunblood.github.io/portfolio/) available. Click "Live Demo" to open it.
 
 ## Features
 - Scroll-based animations for modern UX
