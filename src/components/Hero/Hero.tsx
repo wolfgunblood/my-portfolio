@@ -73,7 +73,7 @@ const Hero = () => {
           }}
           onClick={(_e) => scroll("about-me")}
         >
-          <h3>Find out more</h3>
+          <h3>Explore</h3>
           <BsArrowUpRight className='arrow-icon' size={20}/>
         </motion.button>
     </div >
