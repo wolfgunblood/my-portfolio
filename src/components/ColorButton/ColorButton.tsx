@@ -18,6 +18,7 @@ const ColorButton = () => {
 
     const handleColor = () => {
         dispatch({ type: "colormode/TOGGLE" });
+        setHovered(false);
         { console.log(state) }
         if (!state.darkMode) {
             toast.success('Hello Color Mode!',
