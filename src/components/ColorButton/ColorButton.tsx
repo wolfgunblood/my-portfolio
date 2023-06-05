@@ -1,12 +1,20 @@
-import { useContext } from 'react';
+import { useContext,useState } from 'react';
 import './ColorButton.scss'
 import { motion } from 'framer-motion';
 import { store } from '../../App';
 import toast from "react-hot-toast";
+import { MdOutlineInvertColors } from 'react-icons/md';
+import { IconContext } from "react-icons";
+
 
 const ColorButton = () => {
     const [state, dispatch] = useContext(store);
     //   const { theme } = state;
+    const [hovered, setHovered] = useState(false);
+
+    const handleIconHover = () => {
+        setHovered(!hovered);
+    };
 
     const handleColor = () => {
         dispatch({ type: "colormode/TOGGLE" });
@@ -49,9 +57,13 @@ const ColorButton = () => {
                 ${state.colorMode ? 'color-pad' : 'close-pad'} 
             `}
                     onClick={handleColor}
+                    onMouseEnter={handleIconHover}
+                    onMouseLeave={handleIconHover}
                 >
-                    
-                        <h4>Colors Mode</h4>
+                    <IconContext.Provider value={{ className: hovered ? "icon-hover" : "icon" }}>
+                        <MdOutlineInvertColors />
+                    </IconContext.Provider>
+                    <h4>Color Mode</h4>
                 </motion.button>
             }
         </>

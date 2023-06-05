@@ -55,7 +55,8 @@ const ThemeButton = () => {
                 ${state.darkmode ? 'dark-theme-button' : 'light-theme-button'} 
             `}
                 onClick={handleTheme}
-                onMouseEnter={handleIconHover} onMouseLeave={handleIconHover}
+                onMouseEnter={handleIconHover} 
+                onMouseLeave={handleIconHover}
             >
                 <IconContext.Provider value={{ className: hovered ? "icon-hover" : "icon" }}>
                     {state.darkMode ? (
