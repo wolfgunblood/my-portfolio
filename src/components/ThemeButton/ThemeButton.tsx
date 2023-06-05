@@ -1,12 +1,16 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import './ThemeButton.scss'
 import { motion } from 'framer-motion';
 import { store } from '../../App';
 import toast from "react-hot-toast";
+import { MdDarkMode, MdOutlineLightMode } from 'react-icons/md';
+import { IconContext } from "react-icons";
 
 const ThemeButton = () => {
     const [state, dispatch] = useContext(store);
     //   const { theme } = state;
+    const [hovered, setHovered] = useState(false);
+
 
     const handleTheme = () => {
         dispatch({ type: 'darkmode/TOGGLE' });
@@ -37,6 +41,10 @@ const ThemeButton = () => {
         }
     }
 
+    const handleIconHover = () => {
+        setHovered(!hovered);
+      };
+
     return (
         <>
             <motion.button
@@ -47,9 +55,17 @@ const ThemeButton = () => {
                 ${state.darkmode ? 'dark-theme-button' : 'light-theme-button'} 
             `}
                 onClick={handleTheme}
+                onMouseEnter={handleIconHover} onMouseLeave={handleIconHover}
             >
+                <IconContext.Provider value={{ className: hovered ? "icon-hover" : "icon" }}>
+                    {state.darkMode ? (
+                        <MdOutlineLightMode  />
+                    ) : (
+                        <MdDarkMode />
+                    )}
+                </IconContext.Provider>
                 <h4>
-                    {state.darkMode ? 'To Light Mode' : 'To Dark Mode'}
+                    {state.darkMode ? 'Light Mode' : 'Dark Mode'}
                 </h4>
             </motion.button>
         </>
