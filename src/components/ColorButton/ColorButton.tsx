@@ -51,7 +51,7 @@ const ColorButton = () => {
                     onClick={handleColor}
                 >
                     
-                        <h4>Colors</h4>
+                        <h4>Colors Mode</h4>
                 </motion.button>
             }
         </>
