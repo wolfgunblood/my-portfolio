@@ -8,7 +8,7 @@ import { IconContext } from "react-icons";
 import Resume from "../../assets/Resume/jalajCV.pdf"
 
 const ResumeButton = () => {
-    const [state, dispatch] = useContext(store);
+    const [state, _dispatch] = useContext(store);
     //   const { theme } = state;
     const [hovered, setHovered] = useState(false);
 
