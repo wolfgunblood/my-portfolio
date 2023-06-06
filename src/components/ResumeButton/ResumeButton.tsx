@@ -57,13 +57,13 @@ const ResumeButton = () => {
                 animate={{ x: 0 }}
                 transition={{ type: 'spring', duration: 0.2 }}
                 className={`resume-button
-        ${state.darkmode ? 'dark-theme-button' : 'light-theme-button'} 
+        ${state.darkMode ? 'dark-theme-button' : 'light-theme-button'} 
     `}
                 onClick={handleDownload}
                 onMouseEnter={handleIconHover}
                 onMouseLeave={handleIconHover}
             >
-                <IconContext.Provider value={{ className: hovered ? "icon-hover" : "icon" }}>
+                <IconContext.Provider value={{ className: state.darkMode ?  "icon-dark" : hovered ? "icon-hover" : "icon" }}>
                     <IoDocumentTextOutline size={18} />
                 </IconContext.Provider>
                 <h4>

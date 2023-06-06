@@ -52,13 +52,13 @@ const ThemeButton = () => {
                 animate={{ x: 0 }}
                 transition={{ type: 'spring', duration: 0.2 }}
                 className={`theme-button
-                ${state.darkmode ? 'dark-theme-button' : 'light-theme-button'} 
+                ${state.darkMode ? 'dark-theme-button' : 'light-theme-button'} 
             `}
                 onClick={handleTheme}
                 onMouseEnter={handleIconHover} 
                 onMouseLeave={handleIconHover}
             >
-                <IconContext.Provider value={{ className: hovered ? "icon-hover" : "icon" }}>
+                <IconContext.Provider value={{ className: state.darkMode ?  "icon-dark" : hovered ? "icon-hover" : "icon" }}>
                     {state.darkMode ? (
                         <MdOutlineLightMode  />
                     ) : (
