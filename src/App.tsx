@@ -12,6 +12,7 @@ import Contact from './components/Contact/Contact';
 import { Toaster } from "react-hot-toast";
 import ColorButton from './components/ColorButton/ColorButton';
 import ColorPalette from './components/ColorPalette/ColorPalette';
+import ResumeButton from './components/ResumeButton/ResumeButton';
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const store = createContext<any>(null);
@@ -33,6 +34,7 @@ const App = () => {
         <ColorPalette />
         <ColorButton />
         <ThemeButton />
+        <ResumeButton />
         <Hero />
         <About />
         <Projects />
