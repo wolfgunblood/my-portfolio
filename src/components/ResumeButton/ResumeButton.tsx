@@ -3,7 +3,8 @@ import { useContext, useState } from 'react';
 import { motion } from 'framer-motion';
 import { store } from '../../App';
 import toast from "react-hot-toast";
-import { MdDarkMode, MdOutlineLightMode } from 'react-icons/md';
+// import { GrDocumentDownload } from 'react-icons/gr';
+import { IoDocumentTextOutline } from 'react-icons/io5';
 import { IconContext } from "react-icons";
 
 const ResumeButton = () => {
@@ -11,12 +12,11 @@ const ResumeButton = () => {
     //   const { theme } = state;
     const [hovered, setHovered] = useState(false);
 
-    const handleTheme = () => {
-        dispatch({ type: 'darkmode/TOGGLE' });
-        if (state.darkMode) {
-            toast('Hello Lightness!',
+    const handleDownload = () => {
+        if (!state.darkMode) {
+            toast.success('Download Successful',
                 {
-                    icon: '☀',
+                    icon: '👏',
                     position: "top-left",
                     style: {
                         borderRadius: '10px',
@@ -26,7 +26,7 @@ const ResumeButton = () => {
                 });
         }
         else {
-            toast('Hello Darkness!',
+            toast.success('Download Successful',
                 {
                     icon: '👏',
                     position: "top-left",
@@ -42,34 +42,30 @@ const ResumeButton = () => {
 
     const handleIconHover = () => {
         setHovered(!hovered);
-      };
+    };
 
-  return (
-    <>
-    <motion.button
-        initial={{ x: -150 }}
-        animate={{ x: 0 }}
-        transition={{ type: 'spring', duration: 0.2 }}
-        className={`resume-button
+    return (
+        <>
+            <motion.button
+                initial={{ x: -150 }}
+                animate={{ x: 0 }}
+                transition={{ type: 'spring', duration: 0.2 }}
+                className={`resume-button
         ${state.darkmode ? 'dark-theme-button' : 'light-theme-button'} 
     `}
-        onClick={handleTheme}
-        onMouseEnter={handleIconHover} 
-        onMouseLeave={handleIconHover}
-    >
-        <IconContext.Provider value={{ className: hovered ? "icon-hover" : "icon" }}>
-            {state.darkMode ? (
-                <MdOutlineLightMode  />
-            ) : (
-                <MdDarkMode />
-            )}
-        </IconContext.Provider>
-        <h4>
-            {"Resume"}
-        </h4>
-    </motion.button>
-</>
-  )
+                onClick={handleDownload}
+                onMouseEnter={handleIconHover}
+                onMouseLeave={handleIconHover}
+            >
+                <IconContext.Provider value={{ className: hovered ? "icon-hover" : "icon" }}>
+                    <IoDocumentTextOutline size={18} />
+                </IconContext.Provider>
+                <h4>
+                    {"Resume"}
+                </h4>
+            </motion.button>
+        </>
+    )
 }
 
 export default ResumeButton
