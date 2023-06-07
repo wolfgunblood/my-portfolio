@@ -3,7 +3,7 @@ import { store } from '../../App';
 import { motion } from 'framer-motion';
 import './Contact.scss';
 import ContactForm from '../ContactForm/ContactForm';
-import { FaLinkedinIn,FaTwitter,FaWhatsapp } from 'react-icons/fa';
+import { FaLinkedinIn, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 import { AiOutlineGithub } from "react-icons/ai";
 import toast from "react-hot-toast";
 
@@ -21,7 +21,7 @@ const Contact = () => {
           : "1px solid #ebebeb",
         boxShadow: "0px 3px 6px rgba(0, 0, 0, 0.225)",
         color: state.darkMode ? "#fff" : "#000",
-        fontSize : "14px",
+        fontSize: "14px",
         borderRadius: "14px",
         backgroundColor: state.darkMode ? "#141414" : "",
       }
@@ -85,39 +85,63 @@ const Contact = () => {
             x: { duration: 0.8, type: 'spring', delay: 0.25 },
           }}
         >
-          <button
-            className={`contact-socials-item linkedin 
-              ${state.darkMode ? 'dark-field' : ''}
-            `}
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/jalajdorai/"
           >
-            <FaLinkedinIn className={`svg ${state.darkMode ? 'dark-svg' : 'light-svg'}`} />
-            LinkedIn
-          </button>
-          <button
-            className={`contact-socials-item  twitter
-              ${state.darkMode ? 'dark-field' : ''}
+            <button
+              className={`contact-socials-item linkedin 
+            
+            ${state.darkMode ? 'dark-field' : ''}
             `}
+            >
+              <FaLinkedinIn className={`svg ${state.darkMode ? 'dark-svg' : 'light-svg'}`} />
+              LinkedIn
+            </button>
+          </a>
+          <a
+            target="_blank"
+            href="https://twitter.com/jalaj_dorai"
           >
-            <FaTwitter className={`svg ${state.darkMode ? 'dark-svg' : 'light-svg'}`} />
-            Twitter
-          </button>
-          <button
-            className={`contact-socials-item  whatsapp
-              ${state.darkMode ? 'dark-field' : ''}
-            `}
-          >
-            <FaWhatsapp className={`svg ${state.darkMode ? 'dark-svg' : 'light-svg'}`} />
-            WhatsApp
-          </button>
-          <button
-            className={`contact-socials-item github
-              ${state.darkMode ? 'dark-field' : ''}
-            `}
-          >
-            <AiOutlineGithub className={`svg ${state.darkMode ? 'dark-svg' : 'light-svg'}`} />
-            Github
-          </button>
 
+            <button
+              className={`contact-socials-item  twitter
+            ${state.darkMode ? 'dark-field' : ''}
+            `}
+            >
+              <FaTwitter className={`svg ${state.darkMode ? 'dark-svg' : 'light-svg'}`} />
+              Twitter
+            </button>
+          </a>
+          <a
+            target="_blank"
+            href="https://wa.me/+917209787530"
+          >
+
+            <button
+              className={`contact-socials-item  whatsapp
+            ${state.darkMode ? 'dark-field' : ''}
+            `}
+            >
+              <FaWhatsapp className={`svg ${state.darkMode ? 'dark-svg' : 'light-svg'}`} />
+              WhatsApp
+            </button>
+          </a>
+          <a
+            target="_blank"
+            href="https://github.com/wolfgunblood"
+          >
+
+            <button
+              className={`contact-socials-item github
+          ${state.darkMode ? 'dark-field' : ''}
+          `}
+            >
+              <AiOutlineGithub className={`svg ${state.darkMode ? 'dark-svg' : 'light-svg'}`} />
+              Github
+            </button>
+
+          </a>
           <button
             className='email'
             onClick={copyEmail}
@@ -127,7 +151,7 @@ const Contact = () => {
           </button>
         </motion.section>
       </div>
-    </div>
+    </div >
   )
 }
 
