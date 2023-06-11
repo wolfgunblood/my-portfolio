@@ -59,7 +59,7 @@ const Hero = () => {
             y: {duration: 0.5, type: 'spring'}
         }}
         >
-        I am creative , passionate and a problem solver.I love to trade and code.
+        I am Tech & Finance Enthusiast.I love to trade and code.
         </motion.h4>
         <motion.button
           // onClick= {() => {}}
