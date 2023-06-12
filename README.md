@@ -6,7 +6,7 @@
 </div>
 
 ## Short Description
-A portfolio website built for myself to show off projects, my tech stack, skills and UI/UX expertise.
+A portfolio website built for me to show off projects, my tech stack, skills and, UI/UX expertise.
 
 ## 🔴 Demo
 🧪 [Live Demo](https://wolfgunblood.github.io/portfolio/) available. Click "Live Demo" to open it.
