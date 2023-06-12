@@ -15,7 +15,6 @@ A portfolio website built for myself to show off projects, my tech stack, skills
 - Scroll-based animations for modern UX
 - Spring-like animations for breathable components
 - Theme setting to toggle between dark-mode and light-mode
-- Local storage saving user preferences (language settings)
 - Contact form that sends me an e-mail on every sent message
 - Fully and creatively responsive to all screen sizes
 - Custom Context Menu
